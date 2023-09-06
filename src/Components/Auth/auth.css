@@ -1,0 +1,249 @@
+.login_form {
+}
+.login_box {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 514px;
+  height: 450px;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 5px 1px lightgray;
+  border-radius: 10px;
+  font-weight: lighter;
+  padding: 0 20px 0 20px;
+}
+.enter {
+  font-size: 24px;
+}
+
+.inp_box_pass {
+  border: 1px solid white;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.input_auth_pass {
+  border: 1px solid #d0d3da;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.input_auth_pass:focus {
+  color: #212529;
+  background-color: #fff;
+  border: 2px solid #c06ecc;
+  outline: 0;
+}
+
+.input_auth_pass_error {
+  border: 1px solid #fa0037;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.input_auth_pass_error:focus {
+  color: #212529;
+  background-color: #fff;
+  border: 2px solid #fa0037;
+  outline: 0;
+}
+
+.input_box_button {
+  border: none;
+  height: 24px;
+  cursor: pointer;
+  background-color: white;
+  background-image: url("eye.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 17px;
+}
+.input_box_button:before {
+  border-bottom: 2px solid #1f1f1f;
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 1px;
+  top: 11px;
+  transform: rotate(-30deg);
+}
+.input_box_button_visible {
+  border: none;
+  height: 24px;
+  cursor: pointer;
+  background-color: white;
+  background-image: url("eye.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 17px;
+}
+.input_auth {
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+  padding: 10px 12px 10px 15px;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.input_auth:focus {
+  color: #212529;
+  background-color: #fff;
+  outline: 2px solid #c06ecc;
+}
+.input_auth_error {
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #fa0037;
+  padding: 10px 12px 10px 15px;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.input_auth_error:focus {
+  color: #212529;
+  background-color: #fff;
+  outline: 2px solid #fa0037;
+}
+.register_form {
+  width: 514px;
+  height: 530px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 5px 1px lightgray;
+  border-radius: 10px;
+  text-align: left;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: lighter;
+  padding: 0 20px 0 20px;
+}
+.auth_label {
+  font-size: 14px;
+}
+.auth_inp {
+  width: 100%;
+}
+
+.inp_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.auth_butt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #c06ecc;
+  border: #c06ecc;
+  color: white;
+  border-radius: 6px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.butt_box {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 25px;
+  text-align: center;
+}
+.link_to_auth {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.link {
+  color: #c06ecc;
+  text-decoration: none;
+}
+
+.error_message {
+  margin-left: 5px;
+  font-size: 12px;
+  color: red;
+}
+.error_message::before {
+  display: inline;
+  content: "⚠ ";
+}
+.label_login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login_checkbox {
+  appearance: none;
+}
+
+.fake_login {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d0d3da;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.fake_login::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  background-color: #c06ecc;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s;
+  background-repeat: no-repeat;
+  background-image: url("checkbox-mark-svgrepo-com.png");
+  background-size: 13px 13px;
+  background-position: center;
+  border: 1px solid #c06ecc;
+}
+
+.login_checkbox:checked + .fake_login::before {
+  opacity: 1;
+}
+.text_login {
+  margin-left: 15px;
+  font-size: 16px;
+}

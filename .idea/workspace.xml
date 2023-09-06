@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94ca3a16-5f84-43b6-8278-f67f716b483c" name="Changes" comment="" />
+    <list default="true" id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Auth/auth.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Auth/checkbox-mark-svgrepo-com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Auth/eye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/Products.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Context/context.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routing/Routes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routing/Routing.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +34,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupGrunt">
-      <scroll-view-position x="0" y="0" />
-    </layout>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2UvoYo2W33kUK3XJCpiYbSoRIIn" />
+  <component name="ProjectId" id="2V19bLZ6bI86XkXjBCqxTD1pf8x" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,36 +47,45 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/projects/project_gitflow/src/Components/Auth",
+    "last_opened_file_path": "/home/user/projects/project_gitflow",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/user/Documents/Apps/ideaIU-2022.3.1/idea-IU-223.8214.52/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "prettierjs.PrettierConfiguration.Package": "/home/user/projects/project_gitflow/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/home/user/projects/project_gitflow/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Components/Auth" />
-      <recent name="$PROJECT_DIR$/src/Routing" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="94ca3a16-5f84-43b6-8278-f67f716b483c" name="Changes" comment="" />
-      <created>1693829464310</created>
+      <changelist id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="" />
+      <created>1693992798803</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1693829464310</updated>
-      <workItem from="1693829466363" duration="43000" />
-      <workItem from="1693829533067" duration="1938000" />
+      <updated>1693992798803</updated>
+      <workItem from="1693992801563" duration="204000" />
+      <workItem from="1693993270067" duration="115000" />
+      <workItem from="1693994824009" duration="866000" />
+      <workItem from="1693995833488" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
