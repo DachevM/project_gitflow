@@ -1,12 +1,15 @@
 import React, { useMemo, useState } from "react";
-import "./App.css";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 
 import Routing from "./Routing/Routing";
 import { AuthContext } from "./Context/context";
+import { store } from "./Redux/store";
+
+import "./App.css";
 
 function App() {
-  const [isAuth, setIsAuth] = useState<boolean>(false);
+  const [isAuth, setIsAuth] = useState<boolean>(true);
   const providerValue = useMemo(
     () => ({
       isAuth,
@@ -18,7 +21,9 @@ function App() {
     <div className="App">
       <AuthContext.Provider value={providerValue}>
         <BrowserRouter>
-          <Routing />
+          <Provider store={store}>
+            <Routing />
+          </Provider>
         </BrowserRouter>
       </AuthContext.Provider>
     </div>

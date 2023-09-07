@@ -5,14 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Pagination/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Pagination/pagination.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Search/Search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Search/Vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Search/loop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Elements/Search/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/Categories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/CategoriesMain.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/Subcategories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/categories.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Clients/Clients.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Clients/ClientsList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Clients/clients.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/EditProducts/EditProducts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/checkbox-mark-svgrepo-com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/products.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/Navbar/NavbarRoutes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/Navbar/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/CountModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/Modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/Img.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/pen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/action-creators/categoryAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/action-creators/clientsAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/action-creators/productsAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/action-creators/subcategoryAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reducers/categoryReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reducers/clientsReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reducers/productsReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reducers/searchReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reducers/subcategoryReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/selectors/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/selectors/productSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/selectors/searchSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/types/categories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/types/clients.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/types/products.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/types/search.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/types/subcategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Types/types.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Auth/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Products/Products.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Products/Products.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routing/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routing/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Routing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +97,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+      <recent name="$PROJECT_DIR$/src/Components/Pages" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,7 +115,9 @@
       <workItem from="1693993270067" duration="115000" />
       <workItem from="1693994824009" duration="866000" />
       <workItem from="1693995833488" duration="1443000" />
-      <workItem from="1694072078911" duration="5392000" />
+      <workItem from="1694072078911" duration="7487000" />
+      <workItem from="1694083784470" duration="2144000" />
+      <workItem from="1694086153374" duration="5775000" />
     </task>
     <servers />
   </component>
