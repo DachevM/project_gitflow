@@ -8,6 +8,7 @@ import type * as yup from "yup";
 import type React from "react";
 
 import "./auth.css";
+
 import { schema } from "../helper";
 
 const Register: FC = () => {
@@ -15,6 +16,8 @@ const Register: FC = () => {
   const [registerEmail, setRegisterEmail] = useState<string>("");
   const [registerPass, setRegisterPass] = useState<string>("");
   const [registerRePass, setRegisterRePass] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [isAuthError, setIsAuthError] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
@@ -33,20 +36,26 @@ const Register: FC = () => {
     setIsVisible((isVisible) => !isVisible);
   }, []);
 
-  const SavePass = useCallback(async (data: FormData) => {
-    errors &&
-      (await axios.post(
-        "https://myshop-api.onrender.com/api/user/registration",
-        {
-          username: data.email,
-          password: data.password,
-        }
-      ));
-    navigate("/auth/login");
-    setRegisterRePass("");
-    setRegisterEmail("");
-    setRegisterPass("");
-  }, []);
+  const SavePass = useCallback(
+    async (data: FormData) => {
+      if (
+        await axios
+          .post("https://myshop-api.onrender.com/api/user/registration", {
+            username: data.email,
+            password: data.password,
+          })
+          .catch((e) => setErrorMessage(e.response.data.message))
+      ) {
+        navigate("/auth/login");
+      } else {
+        setIsAuthError(true);
+      }
+      setRegisterRePass("");
+      setRegisterEmail("");
+      setRegisterPass("");
+    },
+    [navigate]
+  );
 
   const InputPassChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,11 +90,16 @@ const Register: FC = () => {
           value={registerEmail}
           onChange={InputLoginChange}
           placeholder={"Введите свой e-mail"}
-          className={errors?.email ? "input_auth_error" : "input_auth"}
+          className={
+            isAuthError || errors?.email ? "input_auth_error" : "input_auth"
+          }
         />
-        {errors?.email && (
-          <span className={"error_message"}>{errors?.email?.message}</span>
-        )}
+        {(isAuthError && (
+          <span className={"error_message"}>{errorMessage}</span>
+        )) ||
+          (errors?.email && (
+            <span className={"error_message"}>{errors?.email?.message}</span>
+          ))}
       </div>
       <label className={"auth_label"} form={"outlined-basic"}>
         Пароль
@@ -99,7 +113,9 @@ const Register: FC = () => {
             onChange={InputPassChange}
             placeholder={"Введите свой пароль"}
             className={
-              errors.password ? "input_auth_pass_error" : "input_auth_pass"
+              isAuthError || errors.password
+                ? "input_auth_pass_error"
+                : "input_auth_pass"
             }
           />
           <button
@@ -127,7 +143,7 @@ const Register: FC = () => {
             onChange={InputRePassChange}
             placeholder={"Повторите пароль"}
             className={
-              errors.passwordConfirmation
+              isAuthError || errors.passwordConfirmation
                 ? "input_auth_pass_error"
                 : "input_auth_pass"
             }

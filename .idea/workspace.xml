@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Auth/auth.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Auth/checkbox-mark-svgrepo-com.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Auth/eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/Products.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Context/context.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Routing/Routes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Routing/Routing.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/AuthLogin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Auth/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Auth/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routing/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +65,8 @@
       <workItem from="1693992801563" duration="204000" />
       <workItem from="1693993270067" duration="115000" />
       <workItem from="1693994824009" duration="866000" />
-      <workItem from="1693995833488" duration="145000" />
+      <workItem from="1693995833488" duration="1443000" />
+      <workItem from="1694072078911" duration="5392000" />
     </task>
     <servers />
   </component>

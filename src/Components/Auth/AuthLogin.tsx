@@ -14,6 +14,7 @@ const AuthLogin = () => {
   const [loginPass, setLoginPass] = useState<string>("");
   const [isAuthError, setIsAuthError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
+
   const { setIsAuth } = useContext(AuthContext);
   const navigate = useNavigate();
 
