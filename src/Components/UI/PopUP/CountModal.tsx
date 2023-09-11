@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import { Img } from "../../../Images/Img";
@@ -34,9 +34,11 @@ const CountModal = ({
     setShow(false);
   }, [setShow]);
 
-  if (number === 0) {
-    setShow(false);
-  }
+  useEffect(() => {
+    if (number === 0) {
+      setShow(false);
+    }
+  }, [number, setShow]);
 
   return createPortal(
     <div className={show ? "modal_count_active" : "modal"}>
@@ -55,7 +57,7 @@ const CountModal = ({
         </button>
       </div>
     </div>,
-    document.getElementById("CountModal") as HTMLInputElement
+    document.getElementById("countModal") as HTMLInputElement
   );
 };
 

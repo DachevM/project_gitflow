@@ -1,3 +1,5 @@
+import type { IProducts } from "../../Types/types";
+
 enum ProductsEnum {
   FETCH_PROD = "FETCH_PROD",
   FILTERED = "FILTERED",
@@ -12,10 +14,10 @@ interface ProdAction {
 }
 
 interface IProd {
-  productsFiltered: any;
-  products: any;
+  productsFiltered: IProducts[];
+  products: IProducts[];
   pages: number;
-  limit: number;
+  limit: string;
   totalPages: number;
 }
 export { ProductsEnum, type ProdAction, type IProd };

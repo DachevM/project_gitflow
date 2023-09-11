@@ -30,8 +30,9 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
       catalog_product: "",
       __v: 0,
     };
-    if (newSubcategories.name.length !== 0)
+    if (newSubcategories.name.length !== 0) {
       dispatch(addCategory(newSubcategories));
+    }
     setCategName("");
   };
 
@@ -49,11 +50,11 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
           value={name}
           onChange={ChangeInpName}
           type={"text"}
-          placeholder={"Введите название категории"}
+          placeholder={"Введите название подкатегории"}
           className={"categories_search_inp"}
         />
         <button className={"categories_butt"} onClick={newSubcategories}>
-          Добавить категорию
+          Добавить подкатегорию
         </button>
       </div>
       <div>
@@ -70,14 +71,14 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
                     className={"categories_trash"}
                     src={Img.trash}
                     alt={""}
-                    onClick={() => removeSubcategories(elem)}
+                    onClick={removeSubcategories.bind(this, elem)}
                   />
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p>Здесь пока нет категории</p>
+          <p>Здесь пока нет подкатегорий</p>
         )}
       </div>
     </div>

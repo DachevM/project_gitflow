@@ -1,3 +1,5 @@
+import type { IClients } from "../../Types/types";
+
 enum ClientsEnum {
   FETCH_CLIENT = "FETCH_CLIENT",
   SET_PAGES = "SET_PAGES",
@@ -11,7 +13,7 @@ interface ClientAction {
 }
 
 interface IClient {
-  clients: any;
+  clients: IClients[];
   pages: number;
   limit: number;
   totalPages: number;

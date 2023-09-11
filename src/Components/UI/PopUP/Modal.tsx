@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { createPortal } from "react-dom";
 
+import type { MouseEventHandler } from "react";
 import type React from "react";
 
 import "./modal.css";
@@ -21,7 +22,7 @@ const Modal = ({ show, setShow, children }: ModalProps) => {
     setShow(false);
   }, [setShow]);
 
-  const Propagation = useCallback((e: any) => {
+  const Propagation: MouseEventHandler<HTMLDivElement> = useCallback((e) => {
     e.stopPropagation();
   }, []);
 

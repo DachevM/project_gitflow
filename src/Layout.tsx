@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./Components/UI/Navbar/Navbar";
 
 import "./App.css";
+
 import type { ReactNode } from "react";
 
 interface LayoutProps {

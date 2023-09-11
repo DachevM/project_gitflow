@@ -1,3 +1,5 @@
+import type { ICategory } from "../../Types/types";
+
 enum CategoriesEnum {
   FETCH_CAT = "FETCH_CAT",
   SET_CAT = "SET_CAT",
@@ -10,6 +12,6 @@ interface CategoryAction {
 }
 
 interface ICat {
-  category: any;
+  category: ICategory[];
 }
 export { CategoriesEnum, type CategoryAction, type ICat };

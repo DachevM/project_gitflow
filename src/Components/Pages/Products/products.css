@@ -27,7 +27,7 @@
   border-top-color: #ebecef;
   align-items: center;
   justify-content: space-between;
-  height: 7%;
+  height: 44px;
 }
 
 .products_body_products {
@@ -45,7 +45,7 @@
   align-items: center;
   border: 2px solid white;
   border-bottom-color: #ebecef;
-  height: 65px;
+  height: 68px;
 }
 
 .products_name {
@@ -63,7 +63,6 @@
 
 .label_prod {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -113,7 +112,6 @@
 
 .label_list {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -157,6 +155,12 @@
   opacity: 1;
 }
 
+.products_name_text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .text {
   margin-left: 20px;
 }
@@ -197,7 +201,6 @@
 
 .edit_head {
   display: flex;
-  flex-direction: row;
   padding-left: 70px;
   padding-right: 70px;
   justify-content: space-between;
@@ -232,7 +235,6 @@
 
 .edit_category {
   display: flex;
-  flex-direction: row;
   margin-bottom: 40px;
   margin-top: 40px;
 }
@@ -257,7 +259,6 @@
 
 .image_descr {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
@@ -271,7 +272,6 @@
 
 .edit_volume_top {
   display: flex;
-  flex-direction: row;
   margin-bottom: 15px;
   align-items: center;
 }
@@ -283,7 +283,6 @@
   border: #ebecef 2px solid;
   margin-bottom: 60px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   text-align: center;
 }

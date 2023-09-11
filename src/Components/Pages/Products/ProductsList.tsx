@@ -64,7 +64,7 @@ const ProductsList = ({ searched }: ListProps) => {
       {searched.length !== 0 ? (
         <div className={"products_body_products"}>
           {searched.map((elem) => (
-            <>
+            <div key={elem.id}>
               <ProductsItem
                 setModalCount={setModalCount}
                 setSelectedItems={setSelectedItems}
@@ -82,7 +82,7 @@ const ProductsList = ({ searched }: ListProps) => {
                   number={selectedItems.length}
                 />
               )}
-            </>
+            </div>
           ))}
         </div>
       ) : (

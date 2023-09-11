@@ -5,7 +5,7 @@ const ProductState: IProd = {
   products: [],
   productsFiltered: [],
   pages: 1,
-  limit: 5,
+  limit: "5",
   totalPages: 0,
 };
 

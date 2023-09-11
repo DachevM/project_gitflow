@@ -4,15 +4,19 @@ import axios from "axios";
 import { type ProdAction, ProductsEnum } from "../types/products";
 import { type IProducts } from "../../Types/types";
 
-const fetchProducts = (server: string, pages: number, limit: number): any => {
+const url = "/products2";
+function fetchProducts(pages: number, limit: string): any {
   return async (dispatch: Dispatch<ProdAction>) => {
     try {
-      const response = await axios.get<IProducts[]>(server, {
-        params: {
-          _limit: limit,
-          _page: pages,
-        },
-      });
+      const response = await axios.get<IProducts[]>(
+        `${process.env.REACT_APP_SERVER_URL}${url}`,
+        {
+          params: {
+            _limit: limit,
+            _page: pages,
+          },
+        }
+      );
       dispatch({ type: ProductsEnum.FETCH_PROD, payload: response.data });
       dispatch({
         type: ProductsEnum.TOTAL_PAGES,
@@ -22,13 +26,13 @@ const fetchProducts = (server: string, pages: number, limit: number): any => {
       console.log(e);
     }
   };
-};
+}
 
 function setPages(page: number): ProdAction {
   return { type: ProductsEnum.SET_PAGES, payload: page };
 }
 
-function setLimit(limit: number): ProdAction {
+function setLimit(limit: string): ProdAction {
   return { type: ProductsEnum.SET_LIMIT, payload: limit };
 }
 

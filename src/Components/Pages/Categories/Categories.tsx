@@ -2,14 +2,15 @@ import { useCallback, useState } from "react";
 
 import type React from "react";
 
+import { type ICategory } from "../../../Types/types";
 import { Img } from "../../../Images/Img";
 import { useAppDispatch } from "../../../Redux/hooks";
 import {
   addCategory,
   remove,
 } from "../../../Redux/action-creators/categoryAction";
+
 import "./categories.css";
-import { type ICategory } from "../../../Types/types";
 
 interface CategoriesProps {
   categories: ICategory[];
@@ -29,7 +30,9 @@ const Categories = ({ categories, setSelected }: CategoriesProps) => {
       position: 0,
       __v: 0,
     };
-    if (newCategories.name.length !== 0) dispatch(addCategory(newCategories));
+    if (newCategories.name.length !== 0) {
+      dispatch(addCategory(newCategories));
+    }
     setCategName("");
   }, [dispatch, name]);
 
@@ -78,7 +81,7 @@ const Categories = ({ categories, setSelected }: CategoriesProps) => {
                     className={"categories_trash"}
                     src={Img.trash}
                     alt={""}
-                    onClick={() => removeCategory(elem)}
+                    onClick={removeCategory.bind(this, elem)}
                   />
                 </div>
               </div>

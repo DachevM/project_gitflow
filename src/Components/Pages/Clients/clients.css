@@ -8,10 +8,10 @@
 }
 
 .clients_head {
-  height: 18%;
   color: #414348;
   text-align: right;
   font-size: 16px;
+  margin-bottom: 25px;
 }
 
 .clients_body {
@@ -23,7 +23,6 @@
 .clients_descr {
   padding-right: 10px;
   display: flex;
-  flex-direction: row;
   background-color: #f8f8fa;
   border: 2px solid white;
   border-bottom-color: #ebecef;
@@ -44,7 +43,6 @@
 
 .clients_body_section {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 2px solid white;

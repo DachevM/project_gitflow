@@ -19,7 +19,7 @@ interface IPaginationProps {
 }
 
 const Pagination = ({ pages, total }: IPaginationProps) => {
-  const [menu, setMenu] = useState<number>(5);
+  const [menu, setMenu] = useState<string>("5");
 
   const dispatch = useAppDispatch();
   const history = useNavigate();
@@ -33,14 +33,17 @@ const Pagination = ({ pages, total }: IPaginationProps) => {
     dispatch(setLimit(menu));
   };
 
-  const selectChange = useCallback((e: any) => {
-    setMenu(e.target.value);
-  }, []);
+  const selectChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setMenu(e.target.value);
+    },
+    []
+  );
 
   useEffect(() => {
     return () => {
       dispatch(setPages(1));
-      dispatch(setLimit(5));
+      dispatch(setLimit("5"));
     };
   }, [history]);
 

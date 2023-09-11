@@ -7,20 +7,17 @@ import Pagination from "../../Elements/Pagination/Pagination";
 import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
 import { fetchClients } from "../../../Redux/action-creators/clientsAction";
 import "./clients.css";
-import { type RootState } from "../../../Redux/store";
 import { type IClients } from "../../../Types/types";
-
-const SERVER_URL = "http://localhost:5005/clients";
+import clientsSelector from "../../../Redux/selectors/clientsSelector";
+import SearchSelectors from "../../../Redux/selectors/searchSelector";
 
 const Clients = () => {
   const dispatch = useAppDispatch();
 
   const { pages, limit, clients, totalPages } = useAppSelector(
-    (state) => state.clients
+    clientsSelector.clients
   );
-  const search = useAppSelector<string>(
-    (state: RootState) => state.search.text
-  );
+  const search = useAppSelector(SearchSelectors.searchText);
 
   const totalCount = useCallback(() => {
     return Math.ceil(totalPages / limit);
@@ -33,7 +30,7 @@ const Clients = () => {
   }, [search, clients]);
 
   useEffect(() => {
-    dispatch(fetchClients(SERVER_URL, pages, limit));
+    dispatch(fetchClients(pages, limit));
   }, [dispatch, limit, pages]);
 
   return (

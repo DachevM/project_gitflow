@@ -4,9 +4,11 @@ import { useEffect } from "react";
 import type React from "react";
 
 import { useAppDispatch } from "../../../Redux/hooks";
-import { searchCases } from "../../../Redux/types/search";
-
 import "./search.css";
+import {
+  changeEvent,
+  empty,
+} from "../../../Redux/action-creators/searchAction";
 
 interface ISearchProps {
   search: string;
@@ -16,14 +18,14 @@ const Search = ({ search }: ISearchProps) => {
   const dispatch = useAppDispatch();
   const history = useNavigate();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: searchCases.SEARCH, payload: e.target.value });
+    dispatch(changeEvent(e));
   };
   const searchEmpty = () => {
-    dispatch({ type: searchCases.CLEAN, payload: "" });
+    dispatch(empty());
   };
   useEffect(() => {
     return () => {
-      dispatch({ type: searchCases.CLEAN, payload: "" });
+      dispatch(empty());
     };
   }, [dispatch, history]);
 

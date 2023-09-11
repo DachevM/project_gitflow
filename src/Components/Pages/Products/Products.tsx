@@ -1,9 +1,6 @@
 import React, { useCallback, useEffect } from "react";
-import { useSelector } from "react-redux";
 
 import ProductsList from "./ProductsList";
-
-import type { RootState } from "../../../Redux/store";
 
 import Search from "../../Elements/Search/Search";
 import Pagination from "../../Elements/Pagination/Pagination";
@@ -12,27 +9,20 @@ import {
   fetchProducts,
   filter,
 } from "../../../Redux/action-creators/productsAction";
-import Selectors from "../../../Redux/selectors";
-
+import ProductSelectors from "../../../Redux/selectors/productSelector";
 import "./products.css";
-
-const SERVER_URL = "http://localhost:5005/products2";
+import SearchSelectors from "../../../Redux/selectors/searchSelector";
 
 const Products = () => {
   const dispatch = useAppDispatch();
 
-  const { products, pages, limit, totalPages } = useSelector(
-    Selectors.product.product
-  );
-  const productsFiltered = useAppSelector(
-    (state) => state.product.productsFiltered
-  );
-  const search = useAppSelector<string>(
-    (state: RootState) => state.search.text
-  );
+  const { products, pages, limit, totalPages, productsFiltered } =
+    useAppSelector(ProductSelectors.product);
+
+  const search = useAppSelector(SearchSelectors.searchText);
 
   const totalCount = useCallback(() => {
-    return Math.ceil(totalPages / limit);
+    return Math.ceil(totalPages / +limit);
   }, [limit, totalPages]);
 
   useEffect(() => {
@@ -40,7 +30,7 @@ const Products = () => {
   }, [search, limit, products, dispatch]);
 
   useEffect(() => {
-    dispatch(fetchProducts(SERVER_URL, pages, limit));
+    dispatch(fetchProducts(pages, limit));
   }, [dispatch, limit, pages]);
 
   return (
@@ -49,7 +39,7 @@ const Products = () => {
         <Search search={search} />
         <Pagination pages={pages} total={totalCount} />
       </div>
-      <ProductsList searched={productsFiltered} /> {/* local state */}
+      <ProductsList searched={productsFiltered} />
     </main>
   );
 };

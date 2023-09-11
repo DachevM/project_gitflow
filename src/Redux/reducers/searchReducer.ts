@@ -12,7 +12,7 @@ export const searchReducer = (
     case searchCases.SEARCH:
       return { ...state, text: action.payload };
     case searchCases.CLEAN:
-      return { text: action.payload };
+      return { ...state, text: action.payload };
     default:
       return state;
   }

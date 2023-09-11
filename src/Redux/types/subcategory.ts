@@ -1,3 +1,5 @@
+import type { ISubCategory } from "../../Types/types";
+
 enum SubcategoriesEnum {
   FETCH_SUB = "FETCH_SUB",
   SET_SUB = "SET_SUB",
@@ -10,6 +12,6 @@ interface SubcategoryAction {
 }
 
 interface ISub {
-  subcategory: any;
+  subcategory: ISubCategory[];
 }
 export { SubcategoriesEnum, type SubcategoryAction, type ISub };

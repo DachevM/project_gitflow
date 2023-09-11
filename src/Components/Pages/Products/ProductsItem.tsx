@@ -1,4 +1,4 @@
-import React, { type ChangeEvent, useCallback, useState } from "react";
+import React, { type ChangeEvent, useCallback, useMemo, useState } from "react";
 
 import EditProducts from "./EditProducts/EditProducts";
 
@@ -33,6 +33,10 @@ const ProductsItem = ({
     setModalCount(true);
   }, [setModalCount]);
 
+  const checked = useMemo(() => {
+    return selectedItems.includes(product.id);
+  }, [product.id, selectedItems]);
+
   return (
     <div key={product.id} className={"products_body_section"}>
       {show && (
@@ -46,19 +50,21 @@ const ProductsItem = ({
           />
         </Modal>
       )}
-      <div className={"products_name"} onClick={showModal}>
+      <div className={"products_name"}>
         <label className={"label_list"}>
           <input
             type={"checkbox"}
             onChange={checkboxHandler}
             onClick={showCount}
-            checked={selectedItems.includes(product.id)}
+            checked={checked}
             value={product.id}
             className={"productsList_checkbox"}
           />
           <span className={"fake_list"}></span>
         </label>
-        <span>{productName}</span>
+        <span className={"products_name_text"} onClick={showModal}>
+          {productName}
+        </span>
       </div>
       <span className={"products_article_section"} onClick={showModal}>
         {productCodeFrom1C}

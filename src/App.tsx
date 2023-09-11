@@ -17,6 +17,7 @@ function App() {
     }),
     [isAuth]
   );
+
   return (
     <div className="App">
       <AuthContext.Provider value={providerValue}>

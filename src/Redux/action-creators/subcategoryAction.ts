@@ -7,11 +7,14 @@ import {
   type SubcategoryAction,
 } from "../types/subcategory";
 
-const SERVER_SUB = "http://localhost:5005/subcategories";
+const url = "/subcategories";
+
 const fetchSub = (): any => {
   return async (dispatch: Dispatch<SubcategoryAction>) => {
     try {
-      const response = await axios.get<ISubCategory[]>(SERVER_SUB);
+      const response = await axios.get<ISubCategory[]>(
+        `${process.env.REACT_APP_SERVER_URL}${url}`
+      );
       dispatch({ type: SubcategoriesEnum.FETCH_SUB, payload: response.data });
     } catch (e) {
       console.log(e);

@@ -4,19 +4,19 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 import Categories from "./Categories";
 import Subcategories from "./Subcategories";
 
-import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
 import { fetchCat } from "../../../Redux/action-creators/categoryAction";
 import { fetchSub } from "../../../Redux/action-creators/subcategoryAction";
+import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
 import "./categories.css";
 import { type ICategory, type ISubCategory } from "../../../Types/types";
+import categorySelector from "../../../Redux/selectors/categorySelector";
+import subcategorySelectors from "../../../Redux/selectors/subcategorySelectors";
 const CategoriesMain = () => {
   const [selected, setSelected] = useState<null | ICategory>(null);
 
   const dispatch = useAppDispatch();
-  const categories = useAppSelector((state) => state.category.category);
-  const subcategories = useAppSelector(
-    (state) => state.subcategory.subcategory
-  );
+  const categories = useAppSelector(categorySelector.category);
+  const subcategories = useAppSelector(subcategorySelectors.subcategory);
 
   const filtered = selected
     ? subcategories.filter(

@@ -1,13 +1,12 @@
-import { useCallback, useContext, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import type React from "react";
+import type { FormEvent, ChangeEvent } from "react";
 
 import { AuthContext } from "../../Context/context";
 
 import "./auth.css";
-
 const AuthLogin = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [loginEmail, setLoginEmail] = useState<string>("");
@@ -23,7 +22,7 @@ const AuthLogin = () => {
   }, []);
 
   const auth = useCallback(
-    async (e: React.FormEvent<HTMLFormElement>) => {
+    async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       if (
         await axios
@@ -44,19 +43,13 @@ const AuthLogin = () => {
     [loginEmail, loginPass, navigate, setIsAuth]
   );
 
-  const InputPassChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setLoginPass(e.target.value);
-    },
-    []
-  );
+  const InputPassChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setLoginPass(e.target.value);
+  }, []);
 
-  const InputLoginChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setLoginEmail(e.target.value);
-    },
-    []
-  );
+  const InputLoginChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setLoginEmail(e.target.value);
+  }, []);
 
   return (
     <form className={"login_box"} onSubmit={auth}>

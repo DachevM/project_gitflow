@@ -1,5 +1,5 @@
 .categories_main {
-  margin: 40px;
+  margin: 30px;
   height: 90%;
   display: flex;
   justify-content: space-between;
@@ -10,10 +10,12 @@
 
 .categories {
   height: 100%;
+  width: 45%;
 }
 
 .subcategories {
   height: 100%;
+  width: 45%;
 }
 
 .categories_head {
