@@ -1,0 +1,377 @@
+.products_main {
+  margin: 30px;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #434652;
+}
+
+.products_head {
+  color: #737680;
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.products_body {
+  display: flex;
+  flex-direction: column;
+}
+
+.products_descr {
+  display: flex;
+  background-color: #f8f8fa;
+  border: 2px solid white;
+  border-bottom-color: #ebecef;
+  border-top-color: #ebecef;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+
+.products_body_products {
+  overflow: auto;
+  height: 580px;
+}
+
+.products_body_products::-webkit-scrollbar {
+  width: 10px;
+}
+
+.products_body_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-bottom-color: #ebecef;
+  height: 68px;
+}
+
+.products_name {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  text-align: left;
+  height: 65px;
+  gap: 1vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  min-width: 340px;
+}
+
+.label_prod {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products_checkbox {
+  appearance: none;
+}
+
+.fake_prod {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d0d3da;
+  background-color: #ebecef;
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.fake_prod::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  background-color: #c06ecc;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s;
+  background-repeat: no-repeat;
+  background-image: url("checkbox-mark-svgrepo-com.png");
+  background-size: 13px 13px;
+  background-position: center;
+  border: 1px solid #c06ecc;
+}
+
+.products_checkbox:checked + .fake_prod::before {
+  opacity: 1;
+}
+
+.text_prod {
+  margin-left: 20px;
+}
+
+.label_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productsList_checkbox {
+  appearance: none;
+}
+
+.fake_list {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d0d3da;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.fake_list::before {
+  content: "";
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  background-color: #c06ecc;
+  border-radius: 2px;
+  opacity: 0;
+  transition: 0.2s;
+  background-repeat: no-repeat;
+  background-image: url("checkbox-mark-svgrepo-com.png");
+  background-size: 13px 13px;
+  background-position: center;
+  border: 1px solid #c06ecc;
+}
+
+.productsList_checkbox:checked + .fake_list::before {
+  opacity: 1;
+}
+
+.products_name_text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+.products_article {
+  text-align: left;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.products_article_section {
+  text-align: left;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.products_category {
+  text-align: left;
+  width: 235px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.edit_products {
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 640px;
+  color: #37393d;
+}
+
+.edit_head {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+  justify-content: space-between;
+  align-items: center;
+  height: 101px;
+  border: 2px solid white;
+  border-bottom-color: #ebecef;
+}
+
+.edit_body {
+  height: 840px;
+  margin: 20px 10px 20px 20px;
+  overflow: auto;
+}
+
+.edit_body::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 100px;
+  background: #e9ebef;
+  margin-left: 10px;
+}
+
+.edit_body::-webkit-scrollbar-thumb {
+  background-color: #b9babe;
+  border-radius: 100px;
+}
+
+.edit_txt {
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.edit_category {
+  display: flex;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.products_edit_select {
+  width: 586px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.edit_volume {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.edit_parameter {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.image_descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.images_prod {
+  width: 80px;
+  height: 80px;
+}
+
+.edit_volume_top {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.tags {
+  width: 470px;
+  height: 30px;
+  border-radius: 8px;
+  border: #ebecef 2px solid;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  height: 25px;
+  margin: 4px;
+  background-color: #deb4e7;
+}
+
+.edit_products_add {
+  color: #c06ecc;
+}
+
+.edit_products_butt_close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #c06ecc;
+  border: #c06ecc;
+  color: white;
+  border-radius: 6px;
+  width: 272px;
+  height: 48px;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.edit_products_butt_save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #d0d3da;
+  color: #37393d;
+  border-radius: 6px;
+  width: 272px;
+  height: 48px;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.edit_products_inp {
+  width: 560px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+  padding: 10px 12px 10px 12px;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.edit_products_descr_inp {
+  width: 560px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+  padding: 10px 12px 10px 12px;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.edit_products_inline_inp {
+  width: 560px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+  padding: 10px 12px 10px 12px;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.image_name {
+  width: 432px;
+  height: 20px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.trash {
+  cursor: pointer;
+}

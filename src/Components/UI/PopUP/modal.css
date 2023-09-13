@@ -1,0 +1,85 @@
+.modal {
+  display: none;
+  z-index: 99;
+}
+
+.modal_active {
+  display: flex;
+  background: rgba(0, 0, 0, 5%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: auto;
+  z-index: 99;
+}
+
+.content {
+  position: relative;
+  z-index: 99;
+  background: white;
+}
+
+.delete_modal {
+  position: relative;
+  z-index: 99;
+  padding: 25px;
+  background: white;
+  width: 400px;
+  height: 260px;
+  top: 30%;
+  left: 40%;
+  border-radius: 20px;
+}
+
+.modal_count_active {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  cursor: auto;
+}
+
+.modal_count {
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 16px 64px 16px 64px;
+  gap: 24px;
+  background: white;
+  width: 280px;
+  height: 78px;
+  margin-top: 230px;
+  margin-left: -100px;
+  z-index: 99;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 #dadada;
+  border: 1px solid #ebecef;
+}
+
+.products_count {
+  font-size: 16px;
+  color: #a6a6a6;
+  height: 24px;
+  margin-top: -7px;
+}
+
+.delete_count_butt {
+  width: 66px;
+  height: 24px;
+  font-size: 16px;
+  color: #c06ecc;
+  background-color: white;
+  border: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.cross_count {
+  cursor: pointer;
+  margin-left: 320px;
+  margin-top: -20px;
+}

@@ -4,18 +4,21 @@ import { Route, Routes } from "react-router-dom";
 import { privateRoutes, publicRoutes } from "./Routes";
 
 import { AuthContext } from "../Context/context";
+import Layout from "../Layout";
 
 const Routing = () => {
   const { isAuth } = useContext(AuthContext);
   if (isAuth) {
     return (
-      <Suspense>
-        <Routes>
-          {privateRoutes.map(({ path, element }) => (
-            <Route key={path} path={path} element={element} />
-          ))}
-        </Routes>
-      </Suspense>
+      <Layout>
+        <Suspense>
+          <Routes>
+            {privateRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+          </Routes>
+        </Suspense>
+      </Layout>
     );
   } else {
     return (

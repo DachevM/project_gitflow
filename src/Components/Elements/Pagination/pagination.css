@@ -1,0 +1,69 @@
+.pagination_pages {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 35px;
+  margin-top: 24px;
+  color: #414348;
+  font-size: 14px;
+}
+
+.menu {
+  width: 47px;
+  height: 32px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  border: 1px solid #d0d3da;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.pagination_pages_butt {
+  font-size: 14px;
+  background-color: white;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #414348;
+  border: 1px solid #d0d3da;
+  width: 28px;
+  height: 32px;
+}
+
+.total_pages {
+  color: #bcbfcc;
+}
+
+.pagination_pages_arrow1 {
+  background-color: white;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #d0d3da;
+  margin-left: 20px;
+  color: #737680;
+  cursor: pointer;
+}
+
+.pagination_pages_arrow1:disabled {
+  background-color: #e3e3e3;
+}
+
+.pagination_pages_arrow1:active {
+  background-color: #e3e3e3;
+}
+
+.pagination_pages_arrow2 {
+  background-color: white;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #d0d3da;
+  color: #737680;
+  cursor: pointer;
+}
+
+.pagination_pages_arrow2:active {
+  background-color: #ececec;
+}
+
+.pagination_pages_arrow2:disabled {
+  background-color: #e3e3e3;
+}
