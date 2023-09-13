@@ -2,11 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import orderReducer from "./reducers/orderReduce";
 import searchReducer from "./reducers/searchReducerRtk";
+import citiesReducer from "./reducers/citiesReducer";
 
 const state = configureStore({
   reducer: {
     orders: orderReducer,
     search: searchReducer,
+    cities: citiesReducer,
   },
 });
 

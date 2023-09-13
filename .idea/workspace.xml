@@ -5,25 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/Orders.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersDescr.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersDescrBody.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/Loader/Loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/Loader/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/actions/orderAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/hooksRTK.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/reducers/orderReduce.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/reducers/searchReducerRtk.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/selectors/ordersSelectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/selectors/searchSelectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/state.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/Cities.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/CitiesHead.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/CitiesItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/CitiesList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/DeleteCity.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Cities/cities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RTK/actions/citiesAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RTK/reducers/citiesReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RTK/selectors/citiesSelectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Elements/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Elements/Pagination/Pagination.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Elements/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Elements/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RTK/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RTK/state.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routing/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Routes.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +40,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/projects/project_gitflow/src/Components/UI/PopUP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/user/projects/project_gitflow/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/user/projects/project_gitflow/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/home/user/projects/project_gitflow",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/user/projects/project_gitflow/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/home/user/projects/project_gitflow/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Components/UI/PopUP" />
@@ -67,6 +65,9 @@
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Components/Pages" />
       <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/Pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,12 +91,47 @@
       <workItem from="1694424099565" duration="7627000" />
       <workItem from="1694431965739" duration="5081000" />
       <workItem from="1694437275659" duration="1345000" />
-      <workItem from="1694586376116" duration="1741000" />
+      <workItem from="1694586376116" duration="11832000" />
+      <workItem from="1694606447326" duration="1819000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

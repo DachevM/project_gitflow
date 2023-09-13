@@ -3,18 +3,22 @@ import React, { useState } from "react";
 import OrdersItem from "./OrdersItem";
 import OrdersDescr from "./OrdersDescr";
 
+import type { IOrders } from "../../../Types/types";
+
 import Modal from "../../UI/PopUP/Modal";
-import { useToolkitSelector } from "../../../RTK/hooksRTK";
 import Loader from "../../UI/Loader/Loader";
+import { useToolkitSelector } from "../../../RTK/hooksRTK";
+import ordersSelectors from "../../../RTK/selectors/ordersSelectors";
+
 import "./orders.css";
-import { type IOrders } from "../../../Types/types";
+
 interface OrdersBodyProps {
   searched: IOrders[];
 }
 
 const OrdersList = ({ searched }: OrdersBodyProps) => {
   const [show, setShow] = useState<boolean>(false);
-  const { isLoading, error } = useToolkitSelector((state) => state.orders);
+  const { isLoading, error } = useToolkitSelector(ordersSelectors.orders);
 
   return (
     <div className={"ordersBody"}>
@@ -32,14 +36,14 @@ const OrdersList = ({ searched }: OrdersBodyProps) => {
       ) : (
         <div className={"orders"}>
           {searched.map((order) => (
-            <>
+            <div key={order.id}>
               <OrdersItem setShow={setShow} key={order.id} order={order} />
               {show && (
                 <Modal show={show} setShow={setShow}>
                   <OrdersDescr order={order} setShow={setShow} />
                 </Modal>
               )}
-            </>
+            </div>
           ))}
         </div>
       )}

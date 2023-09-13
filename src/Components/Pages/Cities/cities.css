@@ -1,0 +1,162 @@
+.cities_main {
+  margin: 30px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  color: #434652;
+}
+
+.cities_head {
+  display: flex;
+}
+
+.cities_body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.cities_body_head {
+  border: 2px solid white;
+  background-color: #f8f8fa;
+  border-bottom-color: #ebecef;
+  border-top-color: #ebecef;
+  height: 6%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.cities_body_left_head {
+  padding-left: 15px;
+  width: 50%;
+}
+
+.cities_body_right_head {
+  padding-left: 15px;
+  width: 50%;
+}
+
+.cities_head_butt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #c06ecc;
+  border: #c06ecc;
+  color: white;
+  border-radius: 6px;
+  width: 30%;
+  height: 40px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+}
+
+.cities_head_inp {
+  width: 30%;
+  height: 20px;
+  border: 1px solid #d0d3da;
+  border-radius: 8px;
+  padding: 10px 12px 10px 12px;
+  gap: 8px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.cities_head_inp:focus {
+  border: 1px solid #c06ecc;
+}
+
+.cities_body_cities {
+  border: 2px solid white;
+  border-bottom-color: #ebecef;
+  height: 7%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.cities_body_left_cities {
+  padding-left: 15px;
+  width: 50%;
+}
+
+.cities_body_right_cities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  width: 50%;
+}
+
+.cities_address {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cities_body_layout {
+  height: 100%;
+  overflow: auto;
+}
+
+.cities_body_layout::-webkit-scrollbar {
+  width: 12px;
+}
+
+.сity_delete {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  text-align: center;
+}
+
+.city_name_delete {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.cities_pen {
+  margin-right: 18px;
+  cursor: pointer;
+}
+
+.cities_trash {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.city_delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #c06ecc;
+  border: #c06ecc;
+  color: white;
+  border-radius: 6px;
+  height: 48px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.city_delete_cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid white;
+  color: #c06ecc;
+  border-radius: 6px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.cities_img {
+  white-space: nowrap;
+}
