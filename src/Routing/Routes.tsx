@@ -1,5 +1,8 @@
 import { Navigate } from "react-router-dom";
 import React, { lazy } from "react";
+import { Provider } from "react-redux";
+
+import { state } from "../RTK/state";
 
 const Products = lazy(
   async () => await import("../Components/Pages/Products/Products")
@@ -10,6 +13,9 @@ const Clients = lazy(
 const CategoriesMain = lazy(
   async () => await import("../Components/Pages/Categories/CategoriesMain")
 );
+const Orders = lazy(
+  async () => await import("../Components/Pages/Orders/Orders")
+);
 const AuthLogin = lazy(
   async () => await import("../Components/Auth/AuthLogin")
 );
@@ -19,6 +25,14 @@ const privateRoutes = [
   { path: "/products", element: <Products /> },
   { path: "/categories", element: <CategoriesMain /> },
   { path: "/clients", element: <Clients /> },
+  {
+    path: "/orders",
+    element: (
+      <Provider store={state}>
+        <Orders />
+      </Provider>
+    ),
+  },
   { path: "/", element: <Navigate to="/products" /> },
   { path: "*", element: <Navigate to="/products" /> },
 ];
