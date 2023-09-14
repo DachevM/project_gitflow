@@ -20,7 +20,7 @@ export const categoriesReducer = (
       return {
         ...state,
         category: state.category.filter(
-          (e: ICategory) => e.id !== action.payload.id
+          (el: ICategory) => el.id !== action.payload.id
         ),
       };
     case CategoriesEnum.ADD_CAT:

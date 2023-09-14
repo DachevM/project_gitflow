@@ -6,14 +6,13 @@ import {
   SubcategoriesEnum,
   type SubcategoryAction,
 } from "../types/subcategory";
-
-const url = "/subcategories";
+import { Links } from "../../links";
 
 const fetchSub = (): any => {
   return async (dispatch: Dispatch<SubcategoryAction>) => {
     try {
       const response = await axios.get<ISubCategory[]>(
-        `${process.env.REACT_APP_SERVER_URL}${url}`
+        `${process.env.REACT_APP_SERVER_URL}${Links.subcategories}`
       );
       dispatch({ type: SubcategoriesEnum.FETCH_SUB, payload: response.data });
     } catch (e) {

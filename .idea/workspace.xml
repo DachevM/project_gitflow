@@ -5,26 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f538287d-42d4-4503-baef-161c4dddacd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/Orders.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersDescr.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersDescrBody.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/Loader/Loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/Loader/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/actions/orderAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/hooksRTK.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/reducers/orderReduce.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/reducers/searchReducerRtk.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/selectors/ordersSelectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/selectors/searchSelectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RTK/state.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/CategoriesItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/SubcategoriesItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Clients/ClientsItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsItemLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RTK/actions/searchAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/links.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Elements/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Elements/Pagination/Pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Elements/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Elements/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routing/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Categories/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Categories/CategoriesMain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/CategoriesMain.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Categories/Subcategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Categories/Subcategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Clients/ClientsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Clients/ClientsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/OrdersList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Orders/orders.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Products/EditProducts/EditProdCharacteristics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Products/EditProducts/EditProdCharacteristics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Pages/Products/ProductsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUP/CountModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/CountModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/DeleteModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUP/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UI/PopUP/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RTK/actions/orderAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RTK/actions/orderAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RTK/reducers/orderReduce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/RTK/reducers/orderReduce.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/action-creators/categoryAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/action-creators/categoryAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/action-creators/clientsAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/action-creators/clientsAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/action-creators/productsAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/action-creators/productsAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/action-creators/subcategoryAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/action-creators/subcategoryAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/categoryReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/categoryReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +40,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature_fix" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -68,6 +81,10 @@
       <recent name="$PROJECT_DIR$/src/Components/Pages" />
       <recent name="$PROJECT_DIR$/src/Components" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,11 +108,35 @@
       <workItem from="1694431965739" duration="5081000" />
       <workItem from="1694437275659" duration="1345000" />
       <workItem from="1694586376116" duration="1741000" />
+      <workItem from="1694672326025" duration="8617000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature_cities" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

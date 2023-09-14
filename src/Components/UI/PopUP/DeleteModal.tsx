@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import type React from "react";
@@ -11,11 +11,20 @@ interface DeleteProps {
   children: React.ReactNode;
 }
 const DeleteModal = ({ show, setShow, children }: DeleteProps) => {
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      setShow(false);
-    }
-  });
+  const keyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        setShow(false);
+      }
+    },
+    [setShow]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyDown);
+    return () => document.removeEventListener("keydown", keyDown);
+  }, [keyDown]);
+
   const CloseModal = useCallback(() => {
     setShow(false);
   }, [setShow]);

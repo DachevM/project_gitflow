@@ -3,13 +3,13 @@ import axios from "axios";
 
 import { type ProdAction, ProductsEnum } from "../types/products";
 import { type IProducts } from "../../Types/types";
+import { Links } from "../../links";
 
-const url = "/products2";
 function fetchProducts(pages: number, limit: string): any {
   return async (dispatch: Dispatch<ProdAction>) => {
     try {
       const response = await axios.get<IProducts[]>(
-        `${process.env.REACT_APP_SERVER_URL}${url}`,
+        `${process.env.REACT_APP_SERVER_URL}${Links.products}`,
         {
           params: {
             _limit: limit,

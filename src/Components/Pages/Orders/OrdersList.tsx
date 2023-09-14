@@ -8,13 +8,14 @@ import { useToolkitSelector } from "../../../RTK/hooksRTK";
 import Loader from "../../UI/Loader/Loader";
 import "./orders.css";
 import { type IOrders } from "../../../Types/types";
+import ordersSelectors from "../../../RTK/selectors/ordersSelectors";
 interface OrdersBodyProps {
   searched: IOrders[];
 }
 
 const OrdersList = ({ searched }: OrdersBodyProps) => {
   const [show, setShow] = useState<boolean>(false);
-  const { isLoading, error } = useToolkitSelector((state) => state.orders);
+  const { isLoading, error } = useToolkitSelector(ordersSelectors.orders);
 
   return (
     <div className={"ordersBody"}>
@@ -26,20 +27,20 @@ const OrdersList = ({ searched }: OrdersBodyProps) => {
         <p className={"orders_total"}> Сумма заказа</p>
         <p className={"orders_isPayed"}>Оплачено</p>
       </div>
-      {error && <h1>Ошибка 404</h1>}
+      {error && <h2>Ошибка при загрузке заказов</h2>}
       {isLoading ? (
         <Loader />
       ) : (
         <div className={"orders"}>
           {searched.map((order) => (
-            <>
+            <div key={order.id}>
               <OrdersItem setShow={setShow} key={order.id} order={order} />
               {show && (
                 <Modal show={show} setShow={setShow}>
                   <OrdersDescr order={order} setShow={setShow} />
                 </Modal>
               )}
-            </>
+            </div>
           ))}
         </div>
       )}

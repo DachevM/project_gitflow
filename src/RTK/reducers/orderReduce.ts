@@ -53,7 +53,7 @@ export const orderSlice = createSlice({
     },
     [fetchOrders.rejected.type]: (state) => {
       state.isLoading = false;
-      state.error = "ошибка 404";
+      state.error = "ошибка при загрузке";
     },
     [fetchTotal.fulfilled.type]: (state, action: OrderAction) => {
       state.total = action.payload;

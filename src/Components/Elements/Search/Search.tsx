@@ -2,10 +2,9 @@ import { useCallback } from "react";
 
 import type React from "react";
 
-import { searchSlice } from "../../../RTK/reducers/searchReducerRtk";
 import { useToolkitDispatch } from "../../../RTK/hooksRTK";
-
 import "./search.css";
+import { searchClean, searchMod } from "../../../RTK/actions/searchAction";
 
 interface ISearchProps {
   search: string;
@@ -13,18 +12,17 @@ interface ISearchProps {
 
 const Search = ({ search }: ISearchProps) => {
   const dispatch = useToolkitDispatch();
-  const { searchMod, searchClean } = searchSlice.actions;
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      dispatch(searchMod(e.target.value));
+      dispatch(searchMod(e));
     },
-    [dispatch, searchMod]
+    [dispatch]
   );
 
   const searchEmpty = useCallback(() => {
     dispatch(searchClean());
-  }, [dispatch, searchClean]);
+  }, [dispatch]);
 
   return (
     <div className={"search_form"}>

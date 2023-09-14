@@ -54,7 +54,6 @@
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  flex-direction: row;
   background-color: #f8f8fa;
   border: 2px solid white;
   border-bottom-color: #ebecef;
@@ -68,7 +67,6 @@
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 2px solid white;
@@ -157,7 +155,6 @@
 
 .orders_descr_head {
   display: flex;
-  flex-direction: row;
   padding-left: 70px;
   padding-right: 70px;
   justify-content: space-between;
