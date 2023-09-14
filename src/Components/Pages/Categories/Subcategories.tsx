@@ -1,15 +1,14 @@
 import { useCallback, useState } from "react";
 
+import SubcategoriesItem from "./SubcategoriesItem";
+
 import type React from "react";
 
-import { Img } from "../../../Images/Img";
 import { useAppDispatch } from "../../../Redux/hooks";
-import {
-  addCategory,
-  removeSub,
-} from "../../../Redux/action-creators/subcategoryAction";
+import { addCategory } from "../../../Redux/action-creators/subcategoryAction";
 import "./categories.css";
 import { type ISubCategory } from "../../../Types/types";
+
 interface SubcategoryProps {
   filtered: ISubCategory[];
 }
@@ -18,9 +17,6 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
   const [name, setCategName] = useState<string>("");
 
   const dispatch = useAppDispatch();
-  const removeSubcategories = (sub: ISubCategory) => {
-    return dispatch(removeSub(sub));
-  };
 
   const newSubcategories = () => {
     const newSubcategories = {
@@ -30,9 +26,9 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
       catalog_product: "",
       __v: 0,
     };
-    if (newSubcategories.name.length !== 0) {
+    newSubcategories.name.trim().length !== 0 &&
       dispatch(addCategory(newSubcategories));
-    }
+
     setCategName("");
   };
 
@@ -59,27 +55,7 @@ const Subcategories = ({ filtered }: SubcategoryProps) => {
       </div>
       <div>
         <div className={"categories_body_head"}>Название подкатегории</div>
-
-        {filtered.length !== 0 ? (
-          <div className={"categories_data"}>
-            {filtered.map((elem) => (
-              <div key={elem.id} className={"categories_body_data"}>
-                <div className={"categories_body_data_name"}>{elem.name}</div>
-                <div>
-                  <img className={"categories_pen"} src={Img.pen} alt={""} />
-                  <img
-                    className={"categories_trash"}
-                    src={Img.trash}
-                    alt={""}
-                    onClick={removeSubcategories.bind(this, elem)}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p>Здесь пока нет подкатегорий</p>
-        )}
+        <SubcategoriesItem filtered={filtered} />
       </div>
     </div>
   );

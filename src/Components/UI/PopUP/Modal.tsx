@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import type { MouseEventHandler } from "react";
@@ -13,11 +13,20 @@ interface ModalProps {
 }
 
 const Modal = ({ show, setShow, children }: ModalProps) => {
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      setShow(false);
-    }
-  });
+  const keyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        setShow(false);
+      }
+    },
+    [setShow]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyDown);
+    return () => document.removeEventListener("keydown", keyDown);
+  }, [keyDown]);
+
   const CloseModal = useCallback(() => {
     setShow(false);
   }, [setShow]);
@@ -25,6 +34,10 @@ const Modal = ({ show, setShow, children }: ModalProps) => {
   const Propagation: MouseEventHandler<HTMLDivElement> = useCallback((e) => {
     e.stopPropagation();
   }, []);
+
+  if (!show) {
+    return null;
+  }
 
   return createPortal(
     <div className={show ? "modal_active" : "modal"} onClick={CloseModal}>

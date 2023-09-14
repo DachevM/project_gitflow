@@ -13,9 +13,6 @@ const Clients = lazy(
 const CategoriesMain = lazy(
   async () => await import("../Components/Pages/Categories/CategoriesMain")
 );
-const Cities = lazy(
-  async () => await import("../Components/Pages/Cities/Cities")
-);
 const Orders = lazy(
   async () => await import("../Components/Pages/Orders/Orders")
 );
@@ -28,14 +25,6 @@ const privateRoutes = [
   { path: "/products", element: <Products /> },
   { path: "/categories", element: <CategoriesMain /> },
   { path: "/clients", element: <Clients /> },
-  {
-    path: "/cities",
-    element: (
-      <Provider store={state}>
-        <Cities />{" "}
-      </Provider>
-    ),
-  },
   {
     path: "/orders",
     element: (

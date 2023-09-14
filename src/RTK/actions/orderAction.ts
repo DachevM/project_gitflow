@@ -2,16 +2,19 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { orderSlice } from "../reducers/orderReduce";
+import { Links } from "../../links";
 
-const SERVER = "http://localhost:5005/orders";
 const fetchOrders = createAsyncThunk(
   "order/fetch",
   async (param: { page: number; limit: number }) => {
     return await new Promise((resolve) => {
       setTimeout(async () => {
-        const response = await axios.get(SERVER, {
-          params: { _limit: param.limit, _page: param.page },
-        });
+        const response = await axios.get(
+          `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
+          {
+            params: { _limit: param.limit, _page: param.page },
+          }
+        );
         resolve(response.data);
       }, 1000);
     });
@@ -21,12 +24,15 @@ const fetchOrders = createAsyncThunk(
 const fetchTotal = createAsyncThunk(
   "total/fetch",
   async (param: { page: number; limit: number }) => {
-    const response = await axios.get(SERVER, {
-      params: {
-        _limit: param.limit,
-        _page: param.page,
-      },
-    });
+    const response = await axios.get(
+      `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
+      {
+        params: {
+          _limit: param.limit,
+          _page: param.page,
+        },
+      }
+    );
     return response.headers["x-total-count"];
   }
 );

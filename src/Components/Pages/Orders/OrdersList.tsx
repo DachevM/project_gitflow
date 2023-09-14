@@ -3,15 +3,12 @@ import React, { useState } from "react";
 import OrdersItem from "./OrdersItem";
 import OrdersDescr from "./OrdersDescr";
 
-import type { IOrders } from "../../../Types/types";
-
 import Modal from "../../UI/PopUP/Modal";
-import Loader from "../../UI/Loader/Loader";
 import { useToolkitSelector } from "../../../RTK/hooksRTK";
-import ordersSelectors from "../../../RTK/selectors/ordersSelectors";
-
+import Loader from "../../UI/Loader/Loader";
 import "./orders.css";
-
+import { type IOrders } from "../../../Types/types";
+import ordersSelectors from "../../../RTK/selectors/ordersSelectors";
 interface OrdersBodyProps {
   searched: IOrders[];
 }
@@ -30,7 +27,7 @@ const OrdersList = ({ searched }: OrdersBodyProps) => {
         <p className={"orders_total"}> Сумма заказа</p>
         <p className={"orders_isPayed"}>Оплачено</p>
       </div>
-      {error && <h1>Ошибка 404</h1>}
+      {error && <h2>Ошибка при загрузке заказов</h2>}
       {isLoading ? (
         <Loader />
       ) : (

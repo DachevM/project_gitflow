@@ -4,13 +4,13 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { ICities } from "../../Types/types";
 
 import { citiesSlice } from "../reducers/citiesReducer";
+import { Links } from "../../links";
 
-const server = "/cities";
 const fetchCities = createAsyncThunk("cities/fetch", async () => {
   return await new Promise((resolve) => {
     setTimeout(async () => {
       const response = await axios.get(
-        `${process.env.REACT_APP_SERVER_URL}${server}`
+        `${process.env.REACT_APP_SERVER_URL}${Links.cities}`
       );
       resolve(response.data);
     }, 1000);
