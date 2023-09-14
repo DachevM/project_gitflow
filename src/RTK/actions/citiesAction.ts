@@ -6,15 +6,15 @@ import type { ICities } from "../../Types/types";
 import { citiesSlice } from "../reducers/citiesReducer";
 import { Links } from "../../links";
 
-const fetchCities = createAsyncThunk("cities/fetch", async () => {
-  return await new Promise((resolve) => {
-    setTimeout(async () => {
-      const response = await axios.get(
-        `${process.env.REACT_APP_SERVER_URL}${Links.cities}`
-      );
-      resolve(response.data);
-    }, 1000);
-  });
+const fetchCities = createAsyncThunk("cities/fetch", async (_, thunkAPI) => {
+  try {
+    const response = await axios.get(
+      `${process.env.REACT_APP_SERVER_URL}${Links.cities}`
+    );
+    return response.data;
+  } catch (e) {
+    return thunkAPI.rejectWithValue("Ошибка загрузки данных");
+  }
 });
 
 const removeCity = (city: ICities) => {

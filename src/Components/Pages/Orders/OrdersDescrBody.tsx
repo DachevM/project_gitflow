@@ -21,17 +21,21 @@ const OrdersDescrBody = ({ order }: IOrdersDescrBody) => {
       <label form={"outlined-basic"}>Заказчик</label>
       <input
         type={"text"}
-        value={order.user.name + " " + order.user.lastName}
+        defaultValue={order.user.name + " " + order.user.lastName}
         className={"orders_descr_inp"}
       />
       <label form={"outlined-basic"}>Номер заказа</label>
       <input
         type={"text"}
-        value={order.order_number}
+        defaultValue={order.order_number}
         className={"orders_descr_inp"}
       />
       <label form={"outlined-basic"}>Дата оформления</label>
-      <input type={"text"} value={order.date} className={"orders_descr_inp"} />
+      <input
+        type={"text"}
+        defaultValue={order.date}
+        className={"orders_descr_inp"}
+      />
 
       <label form={"outlined-basic"}>Способ оплаты</label>
       <div className={"orders_descr_select"}>
@@ -39,21 +43,21 @@ const OrdersDescrBody = ({ order }: IOrdersDescrBody) => {
           <Select
             displayEmpty
             id="demo-select-small"
-            value={categ}
+            defaultValue={categ}
             onChange={handleChange}
           >
-            <MenuItem disabled value="">
+            <MenuItem disabled defaultValue="">
               <em style={styles}>Выберите категорию</em>
             </MenuItem>
-            <MenuItem value={5}>Наличными курьеру</MenuItem>
-            <MenuItem value={10}>Онлайн</MenuItem>
+            <MenuItem defaultValue={5}>Наличными курьеру</MenuItem>
+            <MenuItem defaultValue={10}>Онлайн</MenuItem>
           </Select>
         </FormControl>
       </div>
       <label form={"demo-select-small"}>Способ получения</label>
       <input
         type={"text"}
-        value={order.delivery_type}
+        defaultValue={order.delivery_type}
         className={"orders_descr_inp"}
       />
       <label form={"demo-select-small"}>
@@ -63,7 +67,7 @@ const OrdersDescrBody = ({ order }: IOrdersDescrBody) => {
       </label>
       <input
         type={"text"}
-        value={order.warehouse.city}
+        defaultValue={order.warehouse.city}
         className={"orders_descr_inp"}
       />
       <label form={"demo-select-small"}>Дополнительная информация</label>

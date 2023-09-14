@@ -42,7 +42,7 @@ const OrdersDescr = ({ order, setShow }: DescrProps) => {
           </div>
           <div className={"orders_ins_product"}>
             <span>100 мл</span>
-            <span>4 576 $</span>
+            <span>{order.price} $</span>
           </div>
         </div>
         <h4 className={"orders_descr_change"}>Изменить</h4>
@@ -50,15 +50,15 @@ const OrdersDescr = ({ order, setShow }: DescrProps) => {
         <div className={"orders_products"}>
           <div className={"orders_ins_product"}>
             <span>Товары</span>
-            <span>9134 $</span>
+            <span>{order.products} $</span>
           </div>
           <div className={"orders_ins_product"}>
             <span>Скидки</span>
-            <span>883 $</span>
+            <span>{order.discounts} $</span>
           </div>
           <div className={"orders_ins_product"}>
             <span>Сумма наличных бонусов</span>
-            <span>888 $</span>
+            <span>{order.bonuses} $</span>
           </div>
           <div className={"orders_ins_product_price"}>
             <span>Итого</span>

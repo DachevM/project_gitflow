@@ -41,9 +41,9 @@ export const citiesSlice = createSlice({
       state.error = "";
       state.cities = action.payload;
     },
-    [fetchCities.rejected.type]: (state) => {
+    [fetchCities.rejected.type]: (state, action: citiesAction) => {
       state.isLoading = false;
-      state.error = "ошибка 404";
+      state.error = action.payload;
     },
   },
 });

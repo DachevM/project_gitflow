@@ -18,7 +18,7 @@ const CitiesHead = () => {
       address,
       id: String(Date.now()),
     };
-    dispatch(citiesAdd(newCity));
+    newCity.name.trim().length !== 0 && dispatch(citiesAdd(newCity));
     setCityName("");
     setCityAddress("");
   }, [address, dispatch, name]);

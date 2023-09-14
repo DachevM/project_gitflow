@@ -6,18 +6,18 @@ import { Links } from "../../links";
 
 const fetchOrders = createAsyncThunk(
   "order/fetch",
-  async (param: { page: number; limit: number }) => {
-    return await new Promise((resolve) => {
-      setTimeout(async () => {
-        const response = await axios.get(
-          `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
-          {
-            params: { _limit: param.limit, _page: param.page },
-          }
-        );
-        resolve(response.data);
-      }, 1000);
-    });
+  async (param: { page: number; limit: number }, thunkAPI) => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
+        {
+          params: { _limit: param.limit, _page: param.page },
+        }
+      );
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue("Ошибка загрузки данных");
+    }
   }
 );
 

@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { fetchOrders, fetchTotal } from "../actions/orderAction";
 import { type IOrders } from "../../Types/types";
+
 interface IOrderState {
   order: IOrders[];
   orderFiltered: IOrders[];
@@ -51,9 +52,9 @@ export const orderSlice = createSlice({
       state.error = "";
       state.order = action.payload;
     },
-    [fetchOrders.rejected.type]: (state) => {
+    [fetchOrders.rejected.type]: (state, action: OrderAction) => {
       state.isLoading = false;
-      state.error = "ошибка 404";
+      state.error = action.payload;
     },
     [fetchTotal.fulfilled.type]: (state, action: OrderAction) => {
       state.total = action.payload;

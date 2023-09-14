@@ -33,6 +33,10 @@ const DeleteModal = ({ show, setShow, children }: DeleteProps) => {
     e.stopPropagation();
   }, []);
 
+  if (!show) {
+    return null;
+  }
+
   return createPortal(
     <div className={show ? "modal_active" : "modal"} onClick={CloseModal}>
       <div className={"delete_modal"} onClick={Propagation}>

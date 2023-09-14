@@ -149,6 +149,10 @@ interface ICities {
 interface IOrders {
   id: string;
   order_type: string;
+  products: number;
+  price: number;
+  discounts: number;
+  bonuses: number;
   total: number;
   isViewedByAdmin: boolean;
   order_number: string;
