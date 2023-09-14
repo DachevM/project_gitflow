@@ -3,14 +3,13 @@ import axios from "axios";
 
 import { type ICategory, type ISubCategory } from "../../Types/types";
 import { CategoriesEnum, type CategoryAction } from "../types/categories";
-
-const url = "/categories";
+import { Links } from "../../links";
 
 const fetchCat = (): any => {
   return async (dispatch: Dispatch<CategoryAction>) => {
     try {
       const response = await axios.get<ISubCategory[]>(
-        `${process.env.REACT_APP_SERVER_URL}${url}`
+        `${process.env.REACT_APP_SERVER_URL}${Links.categories}`
       );
       dispatch({ type: CategoriesEnum.FETCH_CAT, payload: response.data });
     } catch (e) {

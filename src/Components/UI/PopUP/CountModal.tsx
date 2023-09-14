@@ -9,6 +9,7 @@ interface ModalProps {
   setCheckAll: (v: boolean) => void;
   number: number;
   setSelectedItems: (v: []) => void;
+  showModalCount: boolean;
 }
 
 const CountModal = ({
@@ -17,12 +18,21 @@ const CountModal = ({
   number,
   setSelectedItems,
   setCheckAll,
+  showModalCount,
 }: ModalProps) => {
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      setShow(false);
-    }
-  });
+  const keyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        setShow(false);
+      }
+    },
+    [setShow]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyDown);
+    return () => document.removeEventListener("keydown", keyDown);
+  }, [keyDown]);
 
   const Delete = useCallback(() => {
     setSelectedItems([]);
@@ -39,6 +49,10 @@ const CountModal = ({
       setShow(false);
     }
   }, [number, setShow]);
+
+  if (!showModalCount) {
+    return null;
+  }
 
   return createPortal(
     <div className={show ? "modal_count_active" : "modal"}>

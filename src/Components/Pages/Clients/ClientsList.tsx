@@ -1,5 +1,7 @@
 import React from "react";
 
+import ClientsItem from "./ClientsItem";
+
 import "./clients.css";
 
 import { type IClients } from "../../../Types/types";
@@ -16,22 +18,7 @@ const ClientsList = ({ searched }: ClientsBodyProps) => {
         <div className={"clients_descr_mail"}>Почта</div>
         <div className={"clients_descr_categ"}>Телефон</div>
       </div>
-
-      {searched.length !== 0 ? (
-        <div className={"clients_body_ins"}>
-          {searched.map((elem) => (
-            <div key={elem.phone} className={"clients_body_section"}>
-              <div className={"clients_descr_ins"}>
-                {elem.name} {elem.lastName}
-              </div>
-              <div className={"clients_descr_mail"}>{elem.email}</div>
-              <div className={"clients_descr_categ"}>{elem.phone}</div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p>Здесь пока нет пользователей</p>
-      )}
+      <ClientsItem searched={searched} />
     </div>
   );
 };

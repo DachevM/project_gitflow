@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import type React from "react";
 
-import { useAppDispatch } from "../../../Redux/hooks";
+import { useToolkitDispatch } from "../../../RTK/hooksRTK";
+import { setLim, setPage } from "../../../RTK/actions/orderAction";
 import {
   setLimit,
   setPages,
@@ -20,17 +21,16 @@ interface IPaginationProps {
 
 const Pagination = ({ pages, total }: IPaginationProps) => {
   const [menu, setMenu] = useState<string>("5");
-
-  const dispatch = useAppDispatch();
+  const dispatch = useToolkitDispatch();
   const history = useNavigate();
   const pagesPlus = () => {
-    dispatch(setPages(pages + 1));
+    dispatch(setPage(pages + 1));
   };
   const pagesMinus = () => {
-    dispatch(setPages(pages - 1));
+    dispatch(setPage(pages - 1));
   };
   const limitChange = () => {
-    dispatch(setLimit(menu));
+    dispatch(setLim(menu));
   };
 
   const selectChange = useCallback(
@@ -39,6 +39,13 @@ const Pagination = ({ pages, total }: IPaginationProps) => {
     },
     []
   );
+
+  useEffect(() => {
+    return () => {
+      dispatch(setPage(1));
+      dispatch(setLim("5"));
+    };
+  }, [history]);
 
   useEffect(() => {
     return () => {

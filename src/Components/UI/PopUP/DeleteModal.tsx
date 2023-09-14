@@ -1,18 +1,16 @@
 import { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import type { MouseEventHandler } from "react";
 import type React from "react";
 
 import "./modal.css";
 
-interface ModalProps {
+interface DeleteProps {
   show: boolean;
   setShow: (v: boolean) => void;
   children: React.ReactNode;
 }
-
-const Modal = ({ show, setShow, children }: ModalProps) => {
+const DeleteModal = ({ show, setShow, children }: DeleteProps) => {
   const keyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.code === "Escape") {
@@ -31,22 +29,18 @@ const Modal = ({ show, setShow, children }: ModalProps) => {
     setShow(false);
   }, [setShow]);
 
-  const Propagation: MouseEventHandler<HTMLDivElement> = useCallback((e) => {
+  const Propagation = useCallback((e: any) => {
     e.stopPropagation();
   }, []);
 
-  if (!show) {
-    return null;
-  }
-
   return createPortal(
     <div className={show ? "modal_active" : "modal"} onClick={CloseModal}>
-      <div className={"content"} onClick={Propagation}>
+      <div className={"delete_modal"} onClick={Propagation}>
         {children}
       </div>
     </div>,
-    document.getElementById("modals") as HTMLInputElement
+    document.getElementById("deleteModal") as HTMLElement
   );
 };
 
-export default Modal;
+export default DeleteModal;
