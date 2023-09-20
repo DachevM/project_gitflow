@@ -16,7 +16,7 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
     "json-server": "^0.17.3",
     "mobx": "^6.10.0",
     "mobx-react-lite": "^4.0.3",
@@ -35,7 +35,7 @@
     "yup": "^1.2.0"
   },
   "scripts": {
-    "start": "react-scripts start --env=.env",
+    "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "server": "json-server --watch  db.json --port 5005"

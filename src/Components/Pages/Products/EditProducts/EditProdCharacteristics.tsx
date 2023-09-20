@@ -13,19 +13,25 @@ const EditProdCharacteristics = ({ product }: ICharacter) => {
     product.characteristics
   );
 
+  const removeCharacteristic = (elem: ICharacteristics) => {
+    setCharacteristics(
+      characteristics.filter((el: ICharacteristics) => el.id !== elem.id)
+    );
+  };
+
   return (
     <div>
       <label form={"edit_parameter"}>Характеристики</label>
-      {characteristics.map((e: ICharacteristics) => (
-        <div key={e.id} className={"edit_parameter"}>
+      {characteristics.map((el: ICharacteristics) => (
+        <div key={el.id} className={"edit_parameter"}>
           <div className={"edit_volume_top"}>
             <input
-              defaultValue={e.key}
+              defaultValue={el.key}
               type={"text"}
               className={"edit_products_inline_inp"}
             />
             <input
-              defaultValue={e.value}
+              defaultValue={el.value}
               type={"text"}
               className={"edit_products_inline_inp"}
             />
@@ -33,13 +39,7 @@ const EditProdCharacteristics = ({ product }: ICharacter) => {
               src={Img.trash}
               className={"trash"}
               alt={""}
-              onClick={() => {
-                setCharacteristics(
-                  characteristics.filter(
-                    (elem: ICharacteristics) => elem.id !== e.id
-                  )
-                );
-              }}
+              onClick={removeCharacteristic.bind(this, el)}
             />
           </div>
         </div>
@@ -47,9 +47,9 @@ const EditProdCharacteristics = ({ product }: ICharacter) => {
       <h4 className={"edit_products_add"}>+ Добавить характеристики</h4>
       <label form={"outlined-basic"}>Тэги товаров</label>
       <div className={"tags"}>
-        {product.tags.map((e) => (
-          <div key={e.id} className={"tag"}>
-            {e.name}
+        {product.tags.map((el) => (
+          <div key={el.id} className={"tag"}>
+            {el.name}
           </div>
         ))}
       </div>

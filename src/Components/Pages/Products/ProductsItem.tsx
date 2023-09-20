@@ -9,7 +9,6 @@ interface ListProps {
   product: IProducts;
   selectedItems: string[];
   checkboxHandler: (v: ChangeEvent<HTMLInputElement>) => void;
-  setSelectedItems: (v: string[]) => void;
   setModalCount: (v: boolean) => void;
 }
 
@@ -39,17 +38,15 @@ const ProductsItem = ({
 
   return (
     <div key={product.id} className={"products_body_section"}>
-      {show && (
-        <Modal show={show} key={product.id} setShow={setShow}>
-          <EditProducts
-            key={product.id}
-            setProductCodeFrom1C={setProductCodeFrom1C}
-            setProductName={setProductName}
-            setShow={setShow}
-            product={product}
-          />
-        </Modal>
-      )}
+      <Modal show={show} key={product.id} setShow={setShow}>
+        <EditProducts
+          key={product.id}
+          setProductCodeFrom1C={setProductCodeFrom1C}
+          setProductName={setProductName}
+          setShow={setShow}
+          product={product}
+        />
+      </Modal>
       <div className={"products_name"}>
         <label className={"label_list"}>
           <input

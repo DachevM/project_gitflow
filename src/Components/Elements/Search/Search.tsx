@@ -1,33 +1,28 @@
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useCallback } from "react";
 
 import type React from "react";
 
-import { useAppDispatch } from "../../../Redux/hooks";
+import { useToolkitDispatch } from "../../../RTK/hooksRTK";
 import "./search.css";
-import {
-  changeEvent,
-  empty,
-} from "../../../Redux/action-creators/searchAction";
+import { searchClean, searchMod } from "../../../RTK/actions/searchAction";
 
 interface ISearchProps {
   search: string;
 }
 
 const Search = ({ search }: ISearchProps) => {
-  const dispatch = useAppDispatch();
-  const history = useNavigate();
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(changeEvent(e));
-  };
-  const searchEmpty = () => {
-    dispatch(empty());
-  };
-  useEffect(() => {
-    return () => {
-      dispatch(empty());
-    };
-  }, [dispatch, history]);
+  const dispatch = useToolkitDispatch();
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      dispatch(searchMod(e));
+    },
+    [dispatch]
+  );
+
+  const searchEmpty = useCallback(() => {
+    dispatch(searchClean());
+  }, [dispatch]);
 
   return (
     <div className={"search_form"}>
