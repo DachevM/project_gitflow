@@ -6,13 +6,13 @@ import {
   SubcategoriesEnum,
   type SubcategoryAction,
 } from "../types/subcategory";
-import { Links } from "../../links";
+import { Endpoints } from "../../Enums/endpoints";
 
 const fetchSub = (): any => {
   return async (dispatch: Dispatch<SubcategoryAction>) => {
     try {
       const response = await axios.get<ISubCategory[]>(
-        `${process.env.REACT_APP_SERVER_URL}${Links.subcategories}`
+        `${process.env.REACT_APP_SERVER_URL}${Endpoints.subcategories}`
       );
       dispatch({ type: SubcategoriesEnum.FETCH_SUB, payload: response.data });
     } catch (e) {
@@ -21,8 +21,8 @@ const fetchSub = (): any => {
   };
 };
 
-const removeSub = (subcategory: ISubCategory) => {
-  return { type: SubcategoriesEnum.SET_SUB, payload: subcategory };
+const removeSub = (id: string) => {
+  return { type: SubcategoriesEnum.SET_SUB, payload: id };
 };
 
 const addCategory = (subcategory: ISubCategory) => {

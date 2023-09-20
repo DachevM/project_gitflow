@@ -12,6 +12,7 @@ import {
   fetchTotal,
   orderFilter,
 } from "../../../RTK/actions/orderAction";
+import { Placeholders } from "../../../Enums/placeholders";
 
 import "./orders.css";
 
@@ -43,7 +44,7 @@ const Orders = () => {
   return (
     <div className={"orders_main"}>
       <div className={"orders_head"}>
-        <Search search={search} />
+        <Search placeholder={Placeholders.orders} search={search} />
         <Pagination pages={page} total={totalCount} />
       </div>
       <OrdersList searched={orderFiltered} />

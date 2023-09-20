@@ -2,14 +2,14 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import { orderSlice } from "../reducers/orderReduce";
-import { Links } from "../../links";
+import { Endpoints } from "../../Enums/endpoints";
 
 const fetchOrders = createAsyncThunk(
   "order/fetch",
   async (param: { page: number; limit: number }, thunkAPI) => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
+        `${process.env.REACT_APP_SERVER_URL}${Endpoints.orders}`,
         {
           params: { _limit: param.limit, _page: param.page },
         }
@@ -25,7 +25,7 @@ const fetchTotal = createAsyncThunk(
   "total/fetch",
   async (param: { page: number; limit: number }) => {
     const response = await axios.get(
-      `${process.env.REACT_APP_SERVER_URL}${Links.orders}`,
+      `${process.env.REACT_APP_SERVER_URL}${Endpoints.orders}`,
       {
         params: {
           _limit: param.limit,

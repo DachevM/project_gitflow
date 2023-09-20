@@ -31,9 +31,11 @@ const CitiesItem = ({ city }: CitiesListProps) => {
             onClick={showModal}
           />
         </div>
-        <DeleteModal show={show} setShow={setShow}>
-          <DeleteCity setShow={setShow} city={city} />
-        </DeleteModal>
+        {show && (
+          <DeleteModal setShow={setShow}>
+            <DeleteCity setShow={setShow} city={city} />
+          </DeleteModal>
+        )}
       </div>
     </div>
   );

@@ -4,21 +4,17 @@ import { createPortal } from "react-dom";
 import { Img } from "../../../Images/Img";
 
 interface ModalProps {
-  show: boolean;
   setShow: (v: boolean) => void;
   setCheckAll: (v: boolean) => void;
   number: number;
-  setSelectedItems: (v: []) => void;
-  showModalCount: boolean;
+  setSelectedItems: (v: string[]) => void;
 }
 
 const CountModal = ({
-  show,
   setShow,
   number,
   setSelectedItems,
   setCheckAll,
-  showModalCount,
 }: ModalProps) => {
   const keyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -50,12 +46,8 @@ const CountModal = ({
     }
   }, [number, setShow]);
 
-  if (!showModalCount) {
-    return null;
-  }
-
   return createPortal(
-    <div className={show ? "modal_count_active" : "modal"}>
+    <div className={"modal_count_active"}>
       <div className={"modal_count"}>
         <img
           src={Img.cross}

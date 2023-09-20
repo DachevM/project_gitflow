@@ -19,9 +19,11 @@ const OrdersItemLayout = ({ searched }: OrdersItemProps) => {
       {searched.map((order) => (
         <div key={order.id}>
           <OrdersItem setShow={setShow} key={order.id} order={order} />
-          <Modal show={show} setShow={setShow}>
-            <OrdersDescr order={order} setShow={setShow} />
-          </Modal>
+          {show && (
+            <Modal setShow={setShow}>
+              <OrdersDescr order={order} setShow={setShow} />
+            </Modal>
+          )}
         </div>
       ))}
     </div>

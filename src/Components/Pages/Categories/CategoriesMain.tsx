@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 import Categories from "./Categories";
 import Subcategories from "./Subcategories";
 
-import { type ICategory, type ISubCategory } from "../../../Types/types";
+import { type ISubCategory } from "../../../Types/types";
 import categorySelector from "../../../Redux/selectors/categorySelector";
 import subcategorySelectors from "../../../Redux/selectors/subcategorySelectors";
 import { fetchCat } from "../../../Redux/action-creators/categoryAction";
@@ -14,17 +14,16 @@ import { useAppDispatch, useAppSelector } from "../../../Redux/hooks";
 import "./categories.css";
 
 const CategoriesMain = () => {
-  const [selected, setSelected] = useState<null | ICategory>(null);
-
+  const [selected, setSelected] = useState<null | string>(null);
   const dispatch = useAppDispatch();
   const categories = useAppSelector(categorySelector.category);
   const subcategories = useAppSelector(subcategorySelectors.subcategory);
 
-  const filtered = selected
-    ? subcategories.filter(
-        (e: ISubCategory) => e.position === selected.position
-      )
-    : [];
+  const filtered = useMemo(() => {
+    return subcategories.filter(
+      (e: ISubCategory) => e.position.toString() === selected
+    );
+  }, [selected, subcategories]);
 
   useEffect(() => {
     dispatch(fetchCat());

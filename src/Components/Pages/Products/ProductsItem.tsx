@@ -38,34 +38,32 @@ const ProductsItem = ({
 
   return (
     <div key={product.id} className={"products_body_section"}>
-      <Modal show={show} key={product.id} setShow={setShow}>
-        <EditProducts
-          key={product.id}
-          setProductCodeFrom1C={setProductCodeFrom1C}
-          setProductName={setProductName}
-          setShow={setShow}
-          product={product}
-        />
-      </Modal>
-      <div className={"products_name"}>
-        <label className={"label_list"}>
-          <input
-            type={"checkbox"}
-            onChange={checkboxHandler}
-            onClick={showCount}
-            checked={checked}
-            value={product.id}
-            className={"productsList_checkbox"}
+      {show && (
+        <Modal key={product.id} setShow={setShow}>
+          <EditProducts
+            key={product.id}
+            setProductCodeFrom1C={setProductCodeFrom1C}
+            setProductName={setProductName}
+            setShow={setShow}
+            product={product}
           />
-          <span className={"fake_list"}></span>
-        </label>
-        <span className={"products_name_text"} onClick={showModal}>
-          {productName}
-        </span>
+        </Modal>
+      )}
+      <label className={"label_list"}>
+        <input
+          type={"checkbox"}
+          onChange={checkboxHandler}
+          onClick={showCount}
+          checked={checked}
+          value={product.id}
+          className={"productsList_checkbox"}
+        />
+        <span className={"fake_list"}></span>
+      </label>
+      <div onClick={showModal} className={"products_name"}>
+        <span className={"products_name_text"}>{productName}</span>
+        <span className={"products_article_section"}>{productCodeFrom1C}</span>
       </div>
-      <span className={"products_article_section"} onClick={showModal}>
-        {productCodeFrom1C}
-      </span>
     </div>
   );
 };

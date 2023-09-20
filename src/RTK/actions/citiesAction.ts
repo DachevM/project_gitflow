@@ -4,12 +4,12 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { ICities } from "../../Types/types";
 
 import { citiesSlice } from "../reducers/citiesReducer";
-import { Links } from "../../links";
+import { Endpoints } from "../../Enums/endpoints";
 
 const fetchCities = createAsyncThunk("cities/fetch", async (_, thunkAPI) => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_SERVER_URL}${Links.cities}`
+      `${process.env.REACT_APP_SERVER_URL}${Endpoints.cities}`
     );
     return response.data;
   } catch (e) {

@@ -6,11 +6,10 @@ import type React from "react";
 import "./modal.css";
 
 interface DeleteProps {
-  show: boolean;
   setShow: (v: boolean) => void;
   children: React.ReactNode;
 }
-const DeleteModal = ({ show, setShow, children }: DeleteProps) => {
+const DeleteModal = ({ setShow, children }: DeleteProps) => {
   const keyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.code === "Escape") {
@@ -22,23 +21,21 @@ const DeleteModal = ({ show, setShow, children }: DeleteProps) => {
 
   useEffect(() => {
     document.addEventListener("keydown", keyDown);
-    return () => document.removeEventListener("keydown", keyDown);
+    return () => {
+      document.removeEventListener("keydown", keyDown);
+    };
   }, [keyDown]);
 
   const CloseModal = useCallback(() => {
     setShow(false);
   }, [setShow]);
 
-  const Propagation = useCallback((e: any) => {
+  const Propagation = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
   }, []);
 
-  if (!show) {
-    return null;
-  }
-
   return createPortal(
-    <div className={show ? "modal_active" : "modal"} onClick={CloseModal}>
+    <div className={"modal_active"} onClick={CloseModal}>
       <div className={"delete_modal"} onClick={Propagation}>
         {children}
       </div>

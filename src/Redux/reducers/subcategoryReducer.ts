@@ -20,7 +20,7 @@ export const subcategoriesReducer = (
       return {
         ...state,
         subcategory: state.subcategory.filter(
-          (e: ISubCategory) => e.id !== action.payload.id
+          (el: ISubCategory) => el.id !== action.payload
         ),
       };
     case SubcategoriesEnum.ADD_SUB:

@@ -43,22 +43,23 @@ export const orderSlice = createSlice({
       state.page = action.payload;
     },
   },
-  extraReducers: {
-    [fetchOrders.pending.type]: (state) => {
-      state.isLoading = true;
-    },
-    [fetchOrders.fulfilled.type]: (state, action: OrderAction) => {
-      state.isLoading = false;
-      state.error = "";
-      state.order = action.payload;
-    },
-    [fetchOrders.rejected.type]: (state, action: OrderAction) => {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
-    [fetchTotal.fulfilled.type]: (state, action: OrderAction) => {
-      state.total = action.payload;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchOrders.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchOrders.fulfilled, (state, action: OrderAction) => {
+        state.isLoading = false;
+        state.error = "";
+        state.order = action.payload;
+      })
+      .addCase(fetchOrders.rejected, (state, action: OrderAction) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchTotal.fulfilled, (state, action: OrderAction) => {
+        state.total = action.payload;
+      });
   },
 });
 

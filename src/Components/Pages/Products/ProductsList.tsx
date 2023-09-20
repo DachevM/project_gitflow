@@ -34,20 +34,20 @@ const ProductsList = ({ searched }: ListProps) => {
   return (
     <div className={"products_body"}>
       <div className={"products_descr"}>
+        <label className={"label_prod"}>
+          <input
+            type={"checkbox"}
+            checked={checkAll}
+            onClick={showCount}
+            onChange={checkAllHandler}
+            className={"products_checkbox"}
+          />
+          <span className={"fake_prod"}></span>
+        </label>
         <div className={"products_name"}>
-          <label className={"label_prod"}>
-            <input
-              type={"checkbox"}
-              checked={checkAll}
-              onClick={showCount}
-              onChange={checkAllHandler}
-              className={"products_checkbox"}
-            />
-            <span className={"fake_prod"}></span>
-            <span className={"text_prod"}>Название продукта</span>
-          </label>
+          <span>Название продукта</span>
+          <span className={"products_article"}>Артикул</span>
         </div>
-        <span className={"products_article"}>Артикул</span>
       </div>
       <ProductsItemLayout
         searched={searched}

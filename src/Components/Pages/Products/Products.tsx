@@ -12,6 +12,7 @@ import {
 import ProductSelectors from "../../../Redux/selectors/productSelector";
 import "./products.css";
 import SearchSelectors from "../../../Redux/selectors/searchSelector";
+import { Placeholders } from "../../../Enums/placeholders";
 
 const Products = () => {
   const dispatch = useAppDispatch();
@@ -36,7 +37,7 @@ const Products = () => {
   return (
     <main className={"products_main"}>
       <div className={"products_head"}>
-        <Search search={search} />
+        <Search placeholder={Placeholders.products} search={search} />
         <Pagination pages={pages} total={totalCount} />
       </div>
       <ProductsList searched={productsFiltered} />

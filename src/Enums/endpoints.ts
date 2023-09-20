@@ -1,4 +1,4 @@
-export enum Links {
+export enum Endpoints {
   products = "/products2",
   clients = "/clients",
   categories = "/categories",

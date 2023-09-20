@@ -13,7 +13,7 @@ import "./categories.css";
 interface CategoriesProps {
   categories: ICategory[];
 
-  setSelected: (v: ICategory) => void;
+  setSelected: (v: string) => void;
 }
 
 const Categories = ({ categories, setSelected }: CategoriesProps) => {

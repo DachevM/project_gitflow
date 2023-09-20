@@ -26,6 +26,7 @@
   border-bottom-color: #ebecef;
   border-top-color: #ebecef;
   align-items: center;
+  padding-left: 10px;
   justify-content: space-between;
   height: 44px;
 }
@@ -45,6 +46,7 @@
   align-items: center;
   border: 2px solid white;
   border-bottom-color: #ebecef;
+  padding-left: 10px;
   height: 68px;
 }
 
@@ -58,7 +60,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
-  min-width: 340px;
+  justify-content: space-between;
+  min-width: 100%;
 }
 
 .label_prod {
@@ -190,7 +193,6 @@
 }
 
 .edit_products {
-  cursor: pointer;
   text-align: left;
   display: flex;
   justify-content: flex-end;
@@ -211,7 +213,7 @@
 }
 
 .edit_body {
-  height: 840px;
+  height: 820px;
   margin: 20px 10px 20px 20px;
   overflow: auto;
 }
