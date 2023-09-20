@@ -2,13 +2,15 @@ import React from "react";
 
 import type { IClients } from "../../../Types/types";
 
+import MissingError from "../../Elements/Error/MissingError";
+
 interface ItemProps {
   searched: IClients[];
 }
 
 const ClientsItem = ({ searched }: ItemProps) => {
   if (!searched.length) {
-    return <p>Здесь пока нет пользователей</p>;
+    return <MissingError title={"пользователей"} />;
   }
 
   return (

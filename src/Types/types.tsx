@@ -182,6 +182,10 @@ interface ICharacteristics {
   value: string;
 }
 
+interface Itags {
+  id: string;
+  name: string;
+}
 interface IProducts {
   id: string;
   nameFrom1C: string;
@@ -238,4 +242,5 @@ export {
   type ICategory,
   type IProtocolCategory,
   type IProtocol,
+  type Itags,
 };

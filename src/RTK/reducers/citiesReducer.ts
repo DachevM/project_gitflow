@@ -32,19 +32,20 @@ export const citiesSlice = createSlice({
       state.cities = [...state.cities, action.payload];
     },
   },
-  extraReducers: {
-    [fetchCities.pending.type]: (state) => {
-      state.isLoading = true;
-    },
-    [fetchCities.fulfilled.type]: (state, action: citiesAction) => {
-      state.isLoading = false;
-      state.error = "";
-      state.cities = action.payload;
-    },
-    [fetchCities.rejected.type]: (state, action: citiesAction) => {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchCities.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchCities.fulfilled, (state, action: citiesAction) => {
+        state.isLoading = false;
+        state.error = "";
+        state.cities = action.payload;
+      })
+      .addCase(fetchCities.rejected, (state, action: citiesAction) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 

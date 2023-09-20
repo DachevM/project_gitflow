@@ -129,7 +129,10 @@ const EditProducts = ({ product, setShow, setProductName }: EditProps) => {
           </div>
         </div>
         <h4 className={"edit_products_add"}>+ Добавить объем</h4>
-        <EditProdCharacteristics product={product} />
+        <EditProdCharacteristics
+          characteristic={product.characteristics}
+          tags={product.tags}
+        />
       </div>
     </div>
   );

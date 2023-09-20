@@ -6,6 +6,7 @@ import type { ChangeEvent } from "react";
 import type { IProducts } from "../../../Types/types";
 
 import CountModal from "../../UI/PopUP/CountModal";
+import MissingError from "../../Elements/Error/MissingError";
 
 interface ItemProps {
   searched: IProducts[];
@@ -39,7 +40,7 @@ const ProductsItemLayout = ({
   };
 
   if (!searched.length) {
-    return <p>Здесь пока нет товаров</p>;
+    return <MissingError title={"продуктов"} />;
   }
 
   return (
@@ -52,14 +53,14 @@ const ProductsItemLayout = ({
             selectedItems={selectedItems}
             product={elem}
           />
-          <CountModal
-            setCheckAll={setCheckAll}
-            setSelectedItems={setSelectedItems}
-            show={showModalCount}
-            showModalCount={showModalCount}
-            setShow={setModalCount}
-            number={selectedItems.length}
-          />
+          {showModalCount && (
+            <CountModal
+              setCheckAll={setCheckAll}
+              setSelectedItems={setSelectedItems}
+              setShow={setModalCount}
+              number={selectedItems.length}
+            />
+          )}
         </div>
       ))}
     </div>

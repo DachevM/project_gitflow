@@ -4,13 +4,15 @@ import CitiesItem from "./CitiesItem";
 
 import type { ICities } from "../../../Types/types";
 
+import MissingError from "../../Elements/Error/MissingError";
+
 interface CitiesItemProps {
   cities: ICities[];
 }
 
 const CitiesItemLayout = ({ cities }: CitiesItemProps) => {
   if (!cities.length) {
-    return <p>Здесь пока нет городов</p>;
+    return <MissingError title={"городов"} />;
   }
 
   return (

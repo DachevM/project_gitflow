@@ -1,10 +1,12 @@
-import React from "react";
+import { useCallback } from "react";
 
+import type React from "react";
 import type { ISubCategory } from "../../../Types/types";
 
 import { Img } from "../../../Images/Img";
 import { removeSub } from "../../../Redux/action-creators/subcategoryAction";
 import { useAppDispatch } from "../../../Redux/hooks";
+import MissingError from "../../Elements/Error/MissingError";
 
 interface ItemProps {
   filtered: ISubCategory[];
@@ -12,12 +14,16 @@ interface ItemProps {
 
 const SubcategoriesItem = ({ filtered }: ItemProps) => {
   const dispatch = useAppDispatch();
-  const removeSubcategories = (sub: ISubCategory) => {
-    return dispatch(removeSub(sub));
-  };
+  const removeSubcategories = useCallback(
+    (e: React.MouseEvent<HTMLImageElement>) => {
+      return dispatch(removeSub(e.currentTarget.id));
+    },
+    [dispatch]
+  );
   if (!filtered.length) {
-    return <p>Здесь пока нет подкатегорий</p>;
+    return <MissingError title={"подкатегорий"} />;
   }
+
   return (
     <div className={"categories_data"}>
       {filtered.map((elem) => (
@@ -26,10 +32,11 @@ const SubcategoriesItem = ({ filtered }: ItemProps) => {
           <div>
             <img className={"categories_pen"} src={Img.pen} alt={""} />
             <img
+              id={elem.id}
               className={"categories_trash"}
               src={Img.trash}
               alt={""}
-              onClick={removeSubcategories.bind(this, elem)}
+              onClick={removeSubcategories}
             />
           </div>
         </div>

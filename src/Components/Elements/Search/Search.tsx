@@ -8,9 +8,10 @@ import { searchClean, searchMod } from "../../../RTK/actions/searchAction";
 
 interface ISearchProps {
   search: string;
+  placeholder: string;
 }
 
-const Search = ({ search }: ISearchProps) => {
+const Search = ({ search, placeholder }: ISearchProps) => {
   const dispatch = useToolkitDispatch();
 
   const handleChange = useCallback(
@@ -30,7 +31,7 @@ const Search = ({ search }: ISearchProps) => {
         value={search}
         onChange={handleChange}
         type={"text"}
-        placeholder={"Поиск по товарам"}
+        placeholder={placeholder}
         className={"search_input"}
       />
       <button onClick={searchEmpty} className={"search_form_button"}></button>

@@ -10,6 +10,7 @@ import "./clients.css";
 import { type IClients } from "../../../Types/types";
 import clientsSelector from "../../../Redux/selectors/clientsSelector";
 import SearchSelectors from "../../../Redux/selectors/searchSelector";
+import { Placeholders } from "../../../Enums/placeholders";
 
 const Clients = () => {
   const dispatch = useAppDispatch();
@@ -36,7 +37,7 @@ const Clients = () => {
   return (
     <div className={"clients_main"}>
       <div className={"clients_head"}>
-        <Search search={search} />
+        <Search placeholder={Placeholders.clients} search={search} />
         <Pagination pages={pages} total={totalCount} />
       </div>
       <ClientsList searched={searchedClients} />

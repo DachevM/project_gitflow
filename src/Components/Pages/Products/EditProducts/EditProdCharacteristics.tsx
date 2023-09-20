@@ -1,23 +1,32 @@
-import React, { useState } from "react";
+import { useCallback, useState } from "react";
 
-import type { ICharacteristics, IProducts } from "../../../../Types/types";
+import type React from "react";
+import type {
+  ICharacteristics,
+  IProducts,
+  Itags,
+} from "../../../../Types/types";
 
 import { Img } from "../../../../Images/Img";
 
 interface ICharacter {
-  product: IProducts;
+  characteristic: ICharacteristics[];
+  tags: Itags[];
 }
 
-const EditProdCharacteristics = ({ product }: ICharacter) => {
-  const [characteristics, setCharacteristics] = useState<ICharacteristics[]>(
-    product.characteristics
+const EditProdCharacteristics = ({ characteristic, tags }: ICharacter) => {
+  const [characteristics, setCharacteristics] =
+    useState<ICharacteristics[]>(characteristic);
+  const removeCharacteristic = useCallback(
+    (event: React.MouseEvent<HTMLImageElement>) => {
+      setCharacteristics(
+        characteristics.filter(
+          (el: ICharacteristics) => el.id !== event.currentTarget.id
+        )
+      );
+    },
+    [characteristics]
   );
-
-  const removeCharacteristic = (elem: ICharacteristics) => {
-    setCharacteristics(
-      characteristics.filter((el: ICharacteristics) => el.id !== elem.id)
-    );
-  };
 
   return (
     <div>
@@ -36,10 +45,11 @@ const EditProdCharacteristics = ({ product }: ICharacter) => {
               className={"edit_products_inline_inp"}
             />
             <img
+              id={el.id}
               src={Img.trash}
               className={"trash"}
               alt={""}
-              onClick={removeCharacteristic.bind(this, el)}
+              onClick={removeCharacteristic}
             />
           </div>
         </div>
@@ -47,7 +57,7 @@ const EditProdCharacteristics = ({ product }: ICharacter) => {
       <h4 className={"edit_products_add"}>+ Добавить характеристики</h4>
       <label form={"outlined-basic"}>Тэги товаров</label>
       <div className={"tags"}>
-        {product.tags.map((el) => (
+        {tags.map((el) => (
           <div key={el.id} className={"tag"}>
             {el.name}
           </div>

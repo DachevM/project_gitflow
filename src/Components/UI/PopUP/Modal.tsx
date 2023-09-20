@@ -7,12 +7,11 @@ import type React from "react";
 import "./modal.css";
 
 interface ModalProps {
-  show: boolean;
   setShow: (v: boolean) => void;
   children: React.ReactNode;
 }
 
-const Modal = ({ show, setShow, children }: ModalProps) => {
+const Modal = ({ setShow, children }: ModalProps) => {
   const keyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.code === "Escape") {
@@ -27,7 +26,7 @@ const Modal = ({ show, setShow, children }: ModalProps) => {
     return () => document.removeEventListener("keydown", keyDown);
   }, [keyDown]);
 
-  const CloseModal = useCallback(() => {
+  const closeModal = useCallback(() => {
     setShow(false);
   }, [setShow]);
 
@@ -35,12 +34,8 @@ const Modal = ({ show, setShow, children }: ModalProps) => {
     e.stopPropagation();
   }, []);
 
-  if (!show) {
-    return null;
-  }
-
   return createPortal(
-    <div className={show ? "modal_active" : "modal"} onClick={CloseModal}>
+    <div className={"modal_active"} onClick={closeModal}>
       <div className={"content"} onClick={Propagation}>
         {children}
       </div>

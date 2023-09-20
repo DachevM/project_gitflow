@@ -35,9 +35,15 @@ const EditProductsDescrip = ({ product, setName, name }: IEditDescr) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setName(e.target.value);
     },
-    []
+    [setName]
   );
 
+  const removeImage = useCallback(
+    (event: React.MouseEvent<HTMLImageElement>) => {
+      setImage(image.filter((e: Images) => e.name !== event.currentTarget.id));
+    },
+    [image]
+  );
   return (
     <div>
       <div className={"edit_descr"}>
@@ -85,12 +91,11 @@ const EditProductsDescrip = ({ product, setName, name }: IEditDescr) => {
             <img className={"images_prod"} src={elem.name} alt="picture" />
             <div className={"image_name"}>{elem.name}</div>
             <img
+              id={elem.name}
               className={"trash"}
               src={Img.trash}
               alt={""}
-              onClick={() => {
-                setImage(image.filter((e: Images) => e.name !== elem.name));
-              }}
+              onClick={removeImage}
             />
           </div>
         ))}
